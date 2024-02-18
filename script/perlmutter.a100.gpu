@@ -1,0 +1,128 @@
+#!/bin/bash
+#TODO: not finished
+#
+# Check packages
+#
+function check_package {
+	dpkg -s $1 1>/dev/null 2>/dev/null
+	if [[ "$?" != "0" ]]; then
+		echo "Package $1 needs to be installed first"
+		exit 1
+	fi
+}
+
+export CRAY_ACCEL_TARGET=nvidia80
+export MPICXX=CC
+
+export MPICH_RDMA_ENABLED_CUDA=1
+export MPICH_GPU_SUPPORT_ENABLED=1
+
+module load PrgEnv-gnu cpe-cuda/23.12 cudatoolkit/11.5 cray-python/3.9.13 cray-fftw/3.3.10.6
+#module load nvidia/23.9
+module load gcc/11.2.0
+# module load gcc-native/12.3
+#module load openmpi/5.0.0
+module load cray-mpich/8.1.25
+#module load mpich/4.1.1
+#module load cray-mpich-abi/8.1.28
+
+module load cmake/3.22.0
+
+# export PKG_CONFIG_PATH=/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib/pkgconfig:$PKG_CONFIG_PATH
+
+export LD_LIBRARY_PATH=/global/homes/h/hjc/mpfr/lib:$LD_LIBRARY_PATH
+export C_INCLUDE_PATH=/global/homes/h/hjc/mpfr/include:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/global/homes/h/hjc/mpfr/include:$CPLUS_INCLUDE_PATH
+export PKG_CONFIG_PATH=/global/homes/h/hjc/mpfr/lib/pkgconfig:$PKG_CONFIG_PATH
+
+export LDFLAGS="-L/global/homes/h/hjc/mpfr/lib $LDFLAGS"
+export CPPFLAGS="-I/global/homes/h/hjc/mpfr/include $CPPFLAGS"
+
+
+#
+# Install python3 if it is not yet there
+#
+echo "Checking numpy"
+hasNumpy=$(python3 -c "import numpy" 2>&1 | grep -c ModuleNotFound)
+if [[ "$hasNumpy" == "1" ]]; then
+	echo "Install numpy"
+	python3 -m pip install --user numpy
+fi
+
+#
+# Get root directory
+#
+root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." >/dev/null 2>&1 && pwd)"
+#
+# Precompile python
+#
+echo "Compile gpt"
+python3 -m compileall ${root}/lib/gpt
+
+#
+# Create dependencies and download
+#
+dep=${root}/dependencies
+mkdir -p ${dep}
+cd ${dep}
+#
+#	#
+#	# Lime
+#	#
+wget https://github.com/usqcd-software/c-lime/tarball/master
+tar xzf master
+mv usqcd-software-c-lime* lime
+rm -f master
+cd lime
+./autogen.sh
+./configure
+make
+cd ..
+#
+#	#
+#	# Grid
+#	#
+git clone https://github.com/xgao19/Grid.git
+cd Grid
+git checkout xgao
+./bootstrap.sh
+
+# git clone https://github.com/dbollweg/Grid.git
+# cd Grid
+# git checkout gpt_proton
+# ./bootstrap.sh
+
+mkdir build
+cd build
+
+../configure \
+        --enable-comms=mpi \
+    --enable-simd=GPU \
+    --enable-shm=nvlink \
+    --enable-gen-simd-width=64 \
+    --enable-accelerator=cuda \
+    --enable-setdevice \
+    --enable-accelerator-cshift \
+    --disable-fermion-reps \
+    --disable-unified \
+    --disable-gparity \
+    CXX=nvcc \
+    CXXFLAGS="-ccbin CC -gencode arch=compute_80,code=sm_80 -std=c++14 -cudart shared --compiler-options -fPIC --compiler-options -target-accel=nvidia80 --compiler-options -fopenmp -I/global/homes/h/hjc/mpfr/include -I${CRAY_MPICH_DIR}/include -I${FFTW_INC}" \
+    LDFLAGS="-L/global/homes/h/hjc/mpfr/lib -L${CRAY_MPICH_DIR}/lib -L${CRAY_MPICH_ROOTDIR}/gtl/lib -L${FFTW_DIR} --compiler-options -fopenmp -lrt -lmpi -lmpi_gtl_cuda -lfftw3 -lfftw3f"
+
+cd Grid
+make -j 4
+#fi
+
+#if [ ! -f ${root}/lib/cgpt/build/cgpt.so ];
+#then
+#
+# cgpt
+#
+echo "now the cgpt dep------------------------------"
+cd ${root}/lib/cgpt
+./make ${root}/dependencies/Grid/build 4
+#fi
+
+echo "To use:"
+echo "source ${root}/lib/cgpt/build/source.sh"

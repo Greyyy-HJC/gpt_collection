@@ -1,0 +1,23 @@
+#!/bin/bash
+
+module load PrgEnv-gnu cpe-cuda/23.02 cudatoolkit/12.0 cray-python/3.9.13.1 cray-fftw/3.3.10.3
+
+export CRAY_ACCEL_TARGET=nvidia80
+export MPICXX=CC
+export MPICH_RDMA_ENABLED_CUDA=1
+export MPICH_GPU_SUPPORT_ENABLED=1
+
+../configure \
+    --enable-comms=mpi \
+    --enable-simd=GPU \
+    --enable-shm=nvlink \
+    --enable-gen-simd-width=64 \
+    --enable-accelerator=cuda \
+    --enable-setdevice \
+    --enable-accelerator-cshift \
+    --disable-fermion-reps \
+    --disable-unified \
+    --disable-gparity \
+    CXX=nvcc \
+    CXXFLAGS="-ccbin CC -gencode arch=compute_80,code=sm_80 -std=c++14 -cudart shared --compiler-options -fPIC --compiler-options -target-accel=nvidia80 --compiler-options -fopenmp -I${CRAY_MPICH_DIR}/include -I${FFTW_INC}"\
+    LDFLAGS="-L${CRAY_MPICH_DIR}/lib -L${CRAY_MPICH_ROOTDIR}/gtl/lib -L${FFTW_DIR} --compiler-options -fopenmp -lrt -lmpi -lmpi_gtl_cuda -lfftw3 -lfftw3f"

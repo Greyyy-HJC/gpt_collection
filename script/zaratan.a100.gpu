@@ -76,7 +76,7 @@ cd build
 	--enable-gparity=no \
 	--enable-comms=mpi-auto \
 	--disable-comms-threads \
-	--with-lime=--with-lime=${dep}/lime \
+	--with-lime=${dep}/lime \
 	--with-fftw=/sw/spack/delta-2022-03/apps/fftw/3.3.10-gcc-11.2.0-ipxfmko/lib \
 	--enable-simd=GPU \
 	MPICXX=mpicxx \

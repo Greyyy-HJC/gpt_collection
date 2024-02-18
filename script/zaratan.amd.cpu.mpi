@@ -1,0 +1,85 @@
+#!/bin/bash
+#
+# Get compilers and libraries
+#
+export MODULEPATH=$MODULEPATH:/bug/opt/modulefiles
+module purge
+module load gcc/9.4.0
+module load fftw/3.3.10/gcc/9.4.0/
+module load openmpi/4.1.1/gcc/9.4.0/
+module load hdf5/1.10.7/gcc/9.4.0/
+
+
+#
+# Get root directory
+#
+root="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../.." >/dev/null 2>&1 && pwd )"
+
+#
+# Precompile python
+#
+echo "Compile gpt"
+python3 -m compileall ${root}/lib/gpt
+
+#
+# Create dependencies and download
+#
+dep=${root}/dependencies
+
+if [ -d ${dep} ];
+then
+	echo "$dep already exists ; rm -rf $dep before bootstrapping again"
+	exit 1
+fi
+
+mkdir -p ${dep}
+cd ${dep}
+
+#
+# Lime
+#
+wget https://github.com/usqcd-software/c-lime/tarball/master
+tar xzf master
+mv usqcd-software-c-lime* lime
+rm -f master
+cd lime
+./autogen.sh
+CC=gcc ./configure
+make -j 16
+cd ..
+
+#
+# Grid
+#
+git clone https://github.com/dbollweg/Grid.git
+cd Grid
+git checkout gpt_proton
+./bootstrap.sh
+mkdir build
+cd build
+CXX=mpicxx CXXFLAGS="-fPIC" ../configure --enable-shm=shmget --enable-comms=mpi-auto --enable-simd=AVX2 --with-lime=${dep}/lime
+
+cd Grid
+make -j 16
+
+
+
+echo "now the cgpt dep------------------------------"
+cd ${root}/lib/cgpt
+./make ${root}/dependencies/Grid/build 4
+
+
+#
+# Tests (can only be run in a job)
+#
+#cd ${root}/tests
+#source ${root}/lib/cgpt/build/source.sh
+#./run "" "--mpi_split 1.1.1.1"
+
+echo "To use:"
+echo "source ${root}/lib/cgpt/build/source.sh"
+
+
+### do it
+source ${root}/lib/cgpt/build/source.sh
+python3 -c "import gpt as g; print(g.message('Hello World!'))"
