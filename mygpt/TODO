@@ -1,0 +1,3 @@
+- higher precision global sum support (should be an extra parameter for grid objects)
+
+- g.sum etc. then need to return this data type

@@ -1,0 +1,251 @@
+SharedMemoryNone: SharedMemoryAllocate 1073741824 GPU implementation 
+0SharedMemoryNone:  SharedMemoryNone.cc acceleratorAllocDevice 1073741824bytes at 0x7f8be2800000 for comms buffers 
+
+__|__|__|__|__|__|__|__|__|__|__|__|__|__|__
+__|__|__|__|__|__|__|__|__|__|__|__|__|__|__
+__|_ |  |  |  |  |  |  |  |  |  |  |  | _|__
+__|_                                    _|__
+__|_   GGGG    RRRR    III    DDDD      _|__
+__|_  G        R   R    I     D   D     _|__
+__|_  G        R   R    I     D    D    _|__
+__|_  G  GG    RRRR     I     D    D    _|__
+__|_  G   G    R  R     I     D   D     _|__
+__|_   GGGG    R   R   III    DDDD      _|__
+__|_                                    _|__
+__|__|__|__|__|__|__|__|__|__|__|__|__|__|__
+__|__|__|__|__|__|__|__|__|__|__|__|__|__|__
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+
+
+Copyright (C) 2015 Peter Boyle, Azusa Yamaguchi, Guido Cossu, Antonin Portelli and other authors
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+Current Grid git commit hash=f2648e94b92c9939e33f55e401ec2fab01d7f553: (grafted, HEAD -> feature/gpt, origin/feature/gpt) clean
+
+Grid : Message : ================================================ 
+Grid : Message : MPI is initialised and logging filters activated 
+Grid : Message : ================================================ 
+Grid : Message : Requested 1073741824 byte stencil comms buffers 
+Grid : Message : MemoryManager::Init() setting up
+Grid : Message : MemoryManager::Init() cache pool for recent host   allocations: SMALL 8 LARGE 2 HUGE 0
+Grid : Message : MemoryManager::Init() cache pool for recent device allocations: SMALL 16 LARGE 8 Huge 0
+Grid : Message : MemoryManager::Init() cache pool for recent shared allocations: SMALL 16 LARGE 8 Huge 0
+Grid : Message : MemoryManager::Init() Unified memory space
+
+=============================================
+              Initialized GPT                
+     Copyright (C) 2020 Christoph Lehner     
+=============================================
+GPT :       0.635923 s : Initializing gpt.random(T,vectorized_ranlux24_389_64) took 0.000174284 s
+GPT :       0.636081 s : Reading configs/S8T32/wilson_b6.25
+GPT :       0.636471 s : Switching view to [1,1,1,1]/Read
+GPT :       0.671655 s : Read 0.00219727 GB at 0.0624378 GB/s (0.103801 GB/s for distribution, 0.156713 GB/s for reading + checksum, 1.59089 GB/s for checksum, 1 views per node)
+GPT :       0.676165 s : Read 0.00219727 GB at 0.517578 GB/s (3.33068 GB/s for distribution, 0.613133 GB/s for reading + checksum, 1.56761 GB/s for checksum, 1 views per node)
+GPT :       0.681243 s : Read 0.00219727 GB at 0.44001 GB/s (1.47977 GB/s for distribution, 0.62647 GB/s for reading + checksum, 1.60697 GB/s for checksum, 1 views per node)
+GPT :       0.685882 s : Read 0.00219727 GB at 0.481706 GB/s (1.46332 GB/s for distribution, 0.71854 GB/s for reading + checksum, 1.61401 GB/s for checksum, 1 views per node)
+GPT :       0.685955 s : Completed reading configs/S8T32/wilson_b6.25 in 0.0499384 s
+GPT :       0.986154 s : non_linear_cg: iteration 0: f(x) = 8.134578491819053e+03, |df|/sqrt(dof) = 1.712562e+00, beta = 0, step = -0.7150551326340306
+GPT :       2.012358 s : non_linear_cg: iteration 10: f(x) = -7.383181820904448e+02, |df|/sqrt(dof) = 1.722533e+00, beta = 0.9911689459818076, step = -0.6350712068098633
+GPT :       2.093048 s : non_linear_cg: max_abs_step adjustment for step = -2.39426745705104
+GPT :       2.299086 s : non_linear_cg: max_abs_step adjustment for step = -1.3240944815875542
+GPT :       2.822323 s : non_linear_cg: max_abs_step adjustment for step = -1.1522947495032878
+GPT :       3.059519 s : non_linear_cg: iteration 20: f(x) = -9.331493198749052e+01, |df|/sqrt(dof) = 1.736826e+00, beta = 1.0277494357081993, step = -0.616567535814055
+GPT :       3.246291 s : non_linear_cg: max_abs_step adjustment for step = -1.2678168074497327
+GPT :       3.351899 s : non_linear_cg: max_abs_step adjustment for step = -2.5273442722621655
+GPT :       3.460929 s : non_linear_cg: max_abs_step adjustment for step = -4.4768057112883
+GPT :       3.566429 s : non_linear_cg: max_abs_step adjustment for step = -1.7327750259755907
+GPT :       3.671694 s : non_linear_cg: max_abs_step adjustment for step = -9.033389751677023
+GPT :       3.991684 s : non_linear_cg: max_abs_step adjustment for step = -1.9955815937326082
+GPT :       4.096248 s : non_linear_cg: max_abs_step adjustment for step = -1.5902576052826947
+GPT :       4.122138 s : non_linear_cg: iteration 30: f(x) = -4.703900137236561e+02, |df|/sqrt(dof) = 1.715647e+00, beta = 0, step = -1.0
+GPT :       4.306512 s : non_linear_cg: max_abs_step adjustment for step = -4.935639596407473
+GPT :       5.099335 s : non_linear_cg: max_abs_step adjustment for step = -1.3864988156799443
+GPT :       5.124165 s : non_linear_cg: iteration 40: f(x) = 9.297804259137625e+01, |df|/sqrt(dof) = 1.720774e+00, beta = 0, step = -1.0
+GPT :       6.188133 s : non_linear_cg: iteration 50: f(x) = 2.503046233532293e+04, |df|/sqrt(dof) = 1.640115e+00, beta = 0.9619485417078147, step = -0.02719509400172864
+GPT :       7.209125 s : non_linear_cg: iteration 60: f(x) = 4.962322551469855e+04, |df|/sqrt(dof) = 1.548202e+00, beta = 0.9821369553834512, step = -0.008525982043010296
+GPT :       8.227837 s : non_linear_cg: iteration 70: f(x) = 6.863207692861070e+04, |df|/sqrt(dof) = 1.451581e+00, beta = 0.9919430848316215, step = -0.0063696043378944625
+GPT :       9.254487 s : non_linear_cg: iteration 80: f(x) = 8.097637412035128e+04, |df|/sqrt(dof) = 1.388508e+00, beta = 0.9879271599952173, step = -0.00506805291530633
+GPT :      10.274057 s : non_linear_cg: iteration 90: f(x) = 9.096017896057537e+04, |df|/sqrt(dof) = 1.308780e+00, beta = 0.992783617263464, step = -0.004415372512550975
+GPT :      11.294653 s : non_linear_cg: iteration 100: f(x) = 9.838247030642661e+04, |df|/sqrt(dof) = 1.253137e+00, beta = 0.9916373637410346, step = -0.003810737597564825
+GPT :      12.316829 s : non_linear_cg: iteration 110: f(x) = 1.049083539094290e+05, |df|/sqrt(dof) = 1.195318e+00, beta = 0.9908667517838079, step = -0.0034352460057081925
+GPT :      13.332431 s : non_linear_cg: iteration 120: f(x) = 1.100860995724475e+05, |df|/sqrt(dof) = 1.155056e+00, beta = 0.9957050684618853, step = -0.003126559048364392
+GPT :      14.352626 s : non_linear_cg: iteration 130: f(x) = 1.139795070782410e+05, |df|/sqrt(dof) = 1.131622e+00, beta = 0.9956191126905973, step = -0.002815615982257255
+GPT :      15.376217 s : non_linear_cg: iteration 140: f(x) = 1.177133096361820e+05, |df|/sqrt(dof) = 1.116310e+00, beta = 0.9975113790999149, step = -0.002520002103374998
+GPT :      16.400696 s : non_linear_cg: iteration 150: f(x) = 1.207103725167456e+05, |df|/sqrt(dof) = 1.093360e+00, beta = 0.994935659628913, step = -0.002297868403250416
+GPT :      17.422494 s : non_linear_cg: iteration 160: f(x) = 1.238499574791463e+05, |df|/sqrt(dof) = 1.071335e+00, beta = 0.9963727091013858, step = -0.0021194962297920138
+GPT :      18.442354 s : non_linear_cg: iteration 170: f(x) = 1.266761740495009e+05, |df|/sqrt(dof) = 1.053685e+00, beta = 0.9980019199438032, step = -0.001953012509787107
+GPT :      19.459906 s : non_linear_cg: iteration 180: f(x) = 1.290607495177859e+05, |df|/sqrt(dof) = 1.039113e+00, beta = 0.9969065323218906, step = -0.0017914039994257214
+GPT :      20.488060 s : non_linear_cg: iteration 190: f(x) = 1.311901008977662e+05, |df|/sqrt(dof) = 1.029927e+00, beta = 0.9989445232883344, step = -0.001683221381364012
+GPT :      21.507814 s : non_linear_cg: iteration 200: f(x) = 1.327164028430058e+05, |df|/sqrt(dof) = 1.020556e+00, beta = 0.9972156282540442, step = -0.0015720524426215006
+GPT :      22.535187 s : non_linear_cg: iteration 210: f(x) = 1.346554407427188e+05, |df|/sqrt(dof) = 1.005983e+00, beta = 0.997202551759573, step = -0.0014578617036855382
+GPT :      23.044337 s : non_linear_cg: converged in 216 iterations: f(x) = 1.356853778183160e+05, |df|/sqrt(dof) = 9.987070e-01
+GPT :      23.137068 s : non_linear_cg: iteration 0: f(x) = 1.511544044515521e+05, |df|/sqrt(dof) = 9.971941e-01, beta = 0, step = -0.15051509756584558
+GPT :      23.420795 s : non_linear_cg: converged in 4 iterations: f(x) = 1.594060225350518e+05, |df|/sqrt(dof) = 2.699175e-01
+GPT :      23.517807 s : non_linear_cg: iteration 0: f(x) = 1.604920017111616e+05, |df|/sqrt(dof) = 2.493450e-01, beta = 0, step = -0.16293858216831184
+GPT :      24.513855 s : non_linear_cg: iteration 10: f(x) = 1.631643027486653e+05, |df|/sqrt(dof) = 2.099726e-01, beta = 0.9524408622511285, step = -0.04898679693798039
+GPT :      25.535028 s : non_linear_cg: iteration 20: f(x) = 1.642804518217948e+05, |df|/sqrt(dof) = 1.936924e-01, beta = 0.9845596128008733, step = -0.0236012182243837
+GPT :      26.569420 s : non_linear_cg: iteration 30: f(x) = 1.648480969315883e+05, |df|/sqrt(dof) = 1.849761e-01, beta = 0.9860240054071683, step = -0.014135188912144167
+GPT :      27.597505 s : non_linear_cg: iteration 40: f(x) = 1.651978720127864e+05, |df|/sqrt(dof) = 1.843804e-01, beta = 1.0163576694434358, step = -0.010252019614381446
+GPT :      28.619527 s : non_linear_cg: iteration 50: f(x) = 1.654572032302713e+05, |df|/sqrt(dof) = 1.850778e-01, beta = 0.9865138431624556, step = -0.007439180745789452
+GPT :      29.641188 s : non_linear_cg: iteration 60: f(x) = 1.657411948032190e+05, |df|/sqrt(dof) = 1.764659e-01, beta = 0.9980459507782847, step = -0.006371569281053949
+GPT :      30.664183 s : non_linear_cg: iteration 70: f(x) = 1.659214125675549e+05, |df|/sqrt(dof) = 1.732153e-01, beta = 0.9939041745176909, step = -0.005060103205381309
+GPT :      31.685293 s : non_linear_cg: iteration 80: f(x) = 1.660838437240845e+05, |df|/sqrt(dof) = 1.685659e-01, beta = 0.9986584466164227, step = -0.00450764127704699
+GPT :      32.719764 s : non_linear_cg: iteration 90: f(x) = 1.662020744028662e+05, |df|/sqrt(dof) = 1.704692e-01, beta = 1.001873686434794, step = -0.003783889192850644
+GPT :      33.747534 s : non_linear_cg: iteration 100: f(x) = 1.662992152577285e+05, |df|/sqrt(dof) = 1.688994e-01, beta = 0.9958860596582059, step = -0.003231023612672442
+GPT :      34.787323 s : non_linear_cg: iteration 110: f(x) = 1.664156325210090e+05, |df|/sqrt(dof) = 1.653869e-01, beta = 0.9987410129658368, step = -0.003051543164424504
+GPT :      35.815487 s : non_linear_cg: iteration 120: f(x) = 1.664900122364257e+05, |df|/sqrt(dof) = 1.680309e-01, beta = 1.0040909044418305, step = -0.002698921656470946
+GPT :      36.849957 s : non_linear_cg: iteration 130: f(x) = 1.665307706974035e+05, |df|/sqrt(dof) = 1.700622e-01, beta = 1.000371986904109, step = -0.002307216365366123
+GPT :      37.899727 s : non_linear_cg: iteration 140: f(x) = 1.666138237409091e+05, |df|/sqrt(dof) = 1.676265e-01, beta = 0.9952635695084406, step = -0.002127683072898387
+GPT :      38.929235 s : non_linear_cg: iteration 150: f(x) = 1.667097331176092e+05, |df|/sqrt(dof) = 1.642820e-01, beta = 0.9970481483794941, step = -0.002036324673956407
+GPT :      39.961052 s : non_linear_cg: iteration 160: f(x) = 1.667610882112799e+05, |df|/sqrt(dof) = 1.619434e-01, beta = 0.9970416665557654, step = -0.0018913739098624226
+GPT :      40.992927 s : non_linear_cg: iteration 170: f(x) = 1.668016820453137e+05, |df|/sqrt(dof) = 1.600865e-01, beta = 0.9980609985172473, step = -0.0017684986814437442
+GPT :      42.022496 s : non_linear_cg: iteration 180: f(x) = 1.668580124572136e+05, |df|/sqrt(dof) = 1.574285e-01, beta = 0.9953754020506712, step = -0.0016821130954119397
+GPT :      43.058314 s : non_linear_cg: iteration 190: f(x) = 1.669106721793161e+05, |df|/sqrt(dof) = 1.537993e-01, beta = 0.9956502096907173, step = -0.0016272737613868922
+GPT :      44.095973 s : non_linear_cg: iteration 200: f(x) = 1.669547862816129e+05, |df|/sqrt(dof) = 1.504118e-01, beta = 0.9955461971733215, step = -0.0015737121694511795
+GPT :      45.126404 s : non_linear_cg: iteration 210: f(x) = 1.669916137055575e+05, |df|/sqrt(dof) = 1.477055e-01, beta = 0.9973172771455273, step = -0.0015328895664102591
+GPT :      46.153243 s : non_linear_cg: iteration 220: f(x) = 1.670206687322193e+05, |df|/sqrt(dof) = 1.469916e-01, beta = 1.000480162281605, step = -0.0014877837198386046
+GPT :      47.184645 s : non_linear_cg: iteration 230: f(x) = 1.670398368271087e+05, |df|/sqrt(dof) = 1.476433e-01, beta = 1.0004367818641293, step = -0.001428481621307396
+GPT :      48.209592 s : non_linear_cg: iteration 240: f(x) = 1.670634560424406e+05, |df|/sqrt(dof) = 1.471936e-01, beta = 0.9987692195432527, step = -0.0013545557122975683
+GPT :      49.244230 s : non_linear_cg: iteration 250: f(x) = 1.670969988670844e+05, |df|/sqrt(dof) = 1.458528e-01, beta = 0.9974334130927358, step = -0.0012928033564456368
+GPT :      50.274606 s : non_linear_cg: iteration 260: f(x) = 1.671329660316170e+05, |df|/sqrt(dof) = 1.432118e-01, beta = 0.9958879454940937, step = -0.0012498435226824952
+GPT :      51.315295 s : non_linear_cg: iteration 270: f(x) = 1.671657338747823e+05, |df|/sqrt(dof) = 1.407325e-01, beta = 0.9970988306325083, step = -0.0012249374268769942
+GPT :      52.347435 s : non_linear_cg: iteration 280: f(x) = 1.671911102049442e+05, |df|/sqrt(dof) = 1.387795e-01, beta = 0.9972134668005184, step = -0.0012053852168774073
+GPT :      53.376983 s : non_linear_cg: iteration 290: f(x) = 1.672156243976741e+05, |df|/sqrt(dof) = 1.371475e-01, beta = 0.998063053940097, step = -0.0011796141217202175
+GPT :      54.297596 s : non_linear_cg: NOT converged in 300 iterations;  |df|/sqrt(dof) = 1.361097e-01 / 1.000000e-01
+GPT :      54.402853 s : non_linear_cg: iteration 0: f(x) = 1.675919180759177e+05, |df|/sqrt(dof) = 1.359991e-01, beta = 0, step = -0.1642425973114463
+GPT :      54.709611 s : non_linear_cg: converged in 4 iterations: f(x) = 1.676980497414918e+05, |df|/sqrt(dof) = 2.406698e-02
+GPT :      54.812489 s : non_linear_cg: iteration 0: f(x) = 1.677081898324135e+05, |df|/sqrt(dof) = 2.487373e-02, beta = 0, step = -0.15766295093683788
+GPT :      55.840120 s : non_linear_cg: iteration 10: f(x) = 1.677497360541617e+05, |df|/sqrt(dof) = 2.794382e-02, beta = 0.9726086070688532, step = -0.06129291533704848
+GPT :      56.866108 s : non_linear_cg: iteration 20: f(x) = 1.677644714425920e+05, |df|/sqrt(dof) = 4.546512e-02, beta = 1.0401783011283032, step = -0.015135774481698403
+GPT :      57.909694 s : non_linear_cg: iteration 30: f(x) = 1.677839804739786e+05, |df|/sqrt(dof) = 4.707521e-02, beta = 0.9891973920332401, step = -0.01026825390239409
+GPT :      58.937643 s : non_linear_cg: iteration 40: f(x) = 1.678073995764258e+05, |df|/sqrt(dof) = 4.763081e-02, beta = 1.0074343563288701, step = -0.008500182314145798
+GPT :      59.967868 s : non_linear_cg: iteration 50: f(x) = 1.678243612050158e+05, |df|/sqrt(dof) = 4.976770e-02, beta = 1.0113646950674524, step = -0.006402234096493483
+GPT :      61.000913 s : non_linear_cg: iteration 60: f(x) = 1.678409053345679e+05, |df|/sqrt(dof) = 5.300864e-02, beta = 1.0118647686786537, step = -0.004767113229221926
+GPT :      62.029888 s : non_linear_cg: iteration 70: f(x) = 1.678529750465944e+05, |df|/sqrt(dof) = 5.607943e-02, beta = 1.0078198452548575, step = -0.003563464955890939
+GPT :      63.061565 s : non_linear_cg: iteration 80: f(x) = 1.678629712814009e+05, |df|/sqrt(dof) = 5.925082e-02, beta = 1.013727692362733, step = -0.0029217791051057507
+GPT :      64.089836 s : non_linear_cg: iteration 90: f(x) = 1.678699223637469e+05, |df|/sqrt(dof) = 6.213512e-02, beta = 1.0062593942519384, step = -0.002409731859498401
+GPT :      65.115292 s : non_linear_cg: iteration 100: f(x) = 1.678807433823135e+05, |df|/sqrt(dof) = 6.346008e-02, beta = 1.0031615594380239, step = -0.00203870569760653
+GPT :      66.142798 s : non_linear_cg: iteration 110: f(x) = 1.678916121978687e+05, |df|/sqrt(dof) = 6.438856e-02, beta = 1.0018901128128221, step = -0.001831029883956204
+GPT :      67.175658 s : non_linear_cg: iteration 120: f(x) = 1.679018669719581e+05, |df|/sqrt(dof) = 6.434494e-02, beta = 0.9990623715001334, step = -0.001676391976302116
+GPT :      68.216580 s : non_linear_cg: iteration 130: f(x) = 1.679117486405183e+05, |df|/sqrt(dof) = 6.403591e-02, beta = 0.9990946963875738, step = -0.0015700930231562777
+GPT :      69.244378 s : non_linear_cg: iteration 140: f(x) = 1.679198374130817e+05, |df|/sqrt(dof) = 6.453084e-02, beta = 1.0042360587487655, step = -0.001490270032801076
+GPT :      70.274490 s : non_linear_cg: iteration 150: f(x) = 1.679217264687011e+05, |df|/sqrt(dof) = 6.654704e-02, beta = 1.0068974954415773, step = -0.0014137981838678287
+GPT :      71.301297 s : non_linear_cg: iteration 160: f(x) = 1.679201170019600e+05, |df|/sqrt(dof) = 6.875236e-02, beta = 1.0057671749543828, step = -0.0012800335772495644
+GPT :      72.338106 s : non_linear_cg: iteration 170: f(x) = 1.679231641371078e+05, |df|/sqrt(dof) = 6.998918e-02, beta = 1.0015452142838885, step = -0.0011425524212926434
+GPT :      73.371463 s : non_linear_cg: iteration 180: f(x) = 1.679315930570633e+05, |df|/sqrt(dof) = 6.982531e-02, beta = 0.9982029234933446, step = -0.0010764428301754405
+GPT :      74.401716 s : non_linear_cg: iteration 190: f(x) = 1.679408838107140e+05, |df|/sqrt(dof) = 6.891967e-02, beta = 0.997277457536952, step = -0.0010618641609014508
+GPT :      75.429296 s : non_linear_cg: iteration 200: f(x) = 1.679477326546255e+05, |df|/sqrt(dof) = 6.858986e-02, beta = 1.0011022608014095, step = -0.0010561880364402347
+GPT :      76.461392 s : non_linear_cg: iteration 210: f(x) = 1.679519606848218e+05, |df|/sqrt(dof) = 6.980898e-02, beta = 1.0049069220393336, step = -0.0010215911086653433
+GPT :      77.488988 s : non_linear_cg: iteration 220: f(x) = 1.679542738647069e+05, |df|/sqrt(dof) = 7.126230e-02, beta = 1.0027913392504253, step = -0.0009215710670721961
+GPT :      78.534426 s : non_linear_cg: iteration 230: f(x) = 1.679557055147677e+05, |df|/sqrt(dof) = 7.226204e-02, beta = 1.0035079948590844, step = -0.0008378963232305557
+GPT :      79.561770 s : non_linear_cg: iteration 240: f(x) = 1.679592040985177e+05, |df|/sqrt(dof) = 7.318457e-02, beta = 1.000713621186323, step = -0.0007923001628826127
+GPT :      80.594367 s : non_linear_cg: iteration 250: f(x) = 1.679665032678192e+05, |df|/sqrt(dof) = 7.239887e-02, beta = 0.9958991442031859, step = -0.0007583098979257425
+GPT :      81.621347 s : non_linear_cg: iteration 260: f(x) = 1.679750960842306e+05, |df|/sqrt(dof) = 7.095313e-02, beta = 0.9968051861183563, step = -0.000749052094441484
+GPT :      82.651303 s : non_linear_cg: iteration 270: f(x) = 1.679829646939009e+05, |df|/sqrt(dof) = 6.992254e-02, beta = 0.9968266437321536, step = -0.000760156484668928
+GPT :      83.704909 s : non_linear_cg: iteration 280: f(x) = 1.679895277273908e+05, |df|/sqrt(dof) = 6.894218e-02, beta = 0.9979699111111905, step = -0.0007552885097147693
+GPT :      84.733143 s : non_linear_cg: iteration 290: f(x) = 1.679940704156806e+05, |df|/sqrt(dof) = 6.864949e-02, beta = 0.9998770419397088, step = -0.0007389103030283145
+GPT :      85.652571 s : non_linear_cg: NOT converged in 300 iterations;  |df|/sqrt(dof) = 6.869237e-02 / 1.000000e-02
+GPT :      85.754685 s : non_linear_cg: iteration 0: f(x) = 1.680957050131229e+05, |df|/sqrt(dof) = 6.870102e-02, beta = 0, step = -0.1893134252177711
+GPT :      86.778089 s : non_linear_cg: iteration 10: f(x) = 1.681607350621598e+05, |df|/sqrt(dof) = 2.165273e-02, beta = 1.3254358833238997, step = -0.06997956617416702
+GPT :      87.806628 s : non_linear_cg: iteration 20: f(x) = 1.681701435053313e+05, |df|/sqrt(dof) = 2.927587e-02, beta = 1.0098907116432398, step = -0.01758228943731326
+GPT :      88.844597 s : non_linear_cg: iteration 30: f(x) = 1.681821094506150e+05, |df|/sqrt(dof) = 3.178072e-02, beta = 1.0198590960025151, step = -0.01067229109607105
+GPT :      89.883044 s : non_linear_cg: iteration 40: f(x) = 1.681894627383594e+05, |df|/sqrt(dof) = 3.273382e-02, beta = 1.0097963946404898, step = -0.007856392794170374
+GPT :      90.909532 s : non_linear_cg: iteration 50: f(x) = 1.681971632347713e+05, |df|/sqrt(dof) = 3.369974e-02, beta = 0.9987350528435927, step = -0.006132127603531425
+GPT :      91.939964 s : non_linear_cg: iteration 60: f(x) = 1.682061374032769e+05, |df|/sqrt(dof) = 3.326935e-02, beta = 1.0030144083120651, step = -0.004699420744367688
+GPT :      92.969234 s : non_linear_cg: iteration 70: f(x) = 1.682122150797860e+05, |df|/sqrt(dof) = 3.155785e-02, beta = 0.9941630045923481, step = -0.004106233790340969
+GPT :      94.003063 s : non_linear_cg: iteration 80: f(x) = 1.682175200616155e+05, |df|/sqrt(dof) = 3.115842e-02, beta = 0.9984876734180742, step = -0.0038132639071848744
+GPT :      95.048751 s : non_linear_cg: iteration 90: f(x) = 1.682210844667855e+05, |df|/sqrt(dof) = 3.091940e-02, beta = 0.999431492956806, step = -0.0032466429742681793
+GPT :      96.079650 s : non_linear_cg: iteration 100: f(x) = 1.682228946644963e+05, |df|/sqrt(dof) = 3.121379e-02, beta = 1.0020563194085408, step = -0.003072372671252057
+GPT :      97.106569 s : non_linear_cg: iteration 110: f(x) = 1.682251888941928e+05, |df|/sqrt(dof) = 3.203870e-02, beta = 1.008770724501295, step = -0.0028898122653300733
+GPT :      98.144452 s : non_linear_cg: iteration 120: f(x) = 1.682282471936228e+05, |df|/sqrt(dof) = 3.343527e-02, beta = 1.006380532016478, step = -0.0025517883680166186
+GPT :      99.183531 s : non_linear_cg: iteration 130: f(x) = 1.682322426118314e+05, |df|/sqrt(dof) = 3.425918e-02, beta = 1.0068542807832246, step = -0.0021803475169640597
+GPT :     100.216143 s : non_linear_cg: iteration 140: f(x) = 1.682362125155057e+05, |df|/sqrt(dof) = 3.609097e-02, beta = 1.009196260350009, step = -0.0018733799433025063
+GPT :     101.255472 s : non_linear_cg: iteration 150: f(x) = 1.682384715608342e+05, |df|/sqrt(dof) = 3.692398e-02, beta = 1.0034709895615177, step = -0.0015569167896852406
+GPT :     102.289175 s : non_linear_cg: iteration 160: f(x) = 1.682402064053643e+05, |df|/sqrt(dof) = 3.773936e-02, beta = 1.0037750631584936, step = -0.001380204971806296
+GPT :     103.325823 s : non_linear_cg: iteration 170: f(x) = 1.682422198182377e+05, |df|/sqrt(dof) = 3.816992e-02, beta = 1.0023544087052134, step = -0.0012377674799923467
+GPT :     104.360301 s : non_linear_cg: iteration 180: f(x) = 1.682434519361870e+05, |df|/sqrt(dof) = 3.899628e-02, beta = 1.0053266042619904, step = -0.0011681917695185455
+GPT :     105.382220 s : non_linear_cg: iteration 190: f(x) = 1.682444358007050e+05, |df|/sqrt(dof) = 3.978643e-02, beta = 1.0022777044766389, step = -0.0011258244210470719
+GPT :     106.407613 s : non_linear_cg: iteration 200: f(x) = 1.682453033225049e+05, |df|/sqrt(dof) = 3.986357e-02, beta = 0.9993871037486648, step = -0.0010433209607608204
+GPT :     107.434365 s : non_linear_cg: iteration 210: f(x) = 1.682457982362808e+05, |df|/sqrt(dof) = 3.985059e-02, beta = 1.0009155706348953, step = -0.000980367940217478
+GPT :     108.469083 s : non_linear_cg: iteration 220: f(x) = 1.682468508616925e+05, |df|/sqrt(dof) = 3.998688e-02, beta = 0.9991336459567931, step = -0.0009585388861070576
+GPT :     109.494474 s : non_linear_cg: iteration 230: f(x) = 1.682492978566681e+05, |df|/sqrt(dof) = 3.913550e-02, beta = 0.9936730701387526, step = -0.0009355532903493332
+GPT :     110.525540 s : non_linear_cg: iteration 240: f(x) = 1.682524372081612e+05, |df|/sqrt(dof) = 3.811850e-02, beta = 0.9963172367675883, step = -0.0009281383786684984
+GPT :     111.569991 s : non_linear_cg: iteration 250: f(x) = 1.682548561591976e+05, |df|/sqrt(dof) = 3.758978e-02, beta = 0.9975210000843043, step = -0.0009349826798582794
+GPT :     112.603923 s : non_linear_cg: iteration 260: f(x) = 1.682556606330550e+05, |df|/sqrt(dof) = 3.724129e-02, beta = 0.9987743824149625, step = -0.0009327142031764119
+GPT :     113.632085 s : non_linear_cg: iteration 270: f(x) = 1.682556040825535e+05, |df|/sqrt(dof) = 3.708766e-02, beta = 0.9993122007848187, step = -0.0009231365573543661
+GPT :     114.659933 s : non_linear_cg: iteration 280: f(x) = 1.682562079409182e+05, |df|/sqrt(dof) = 3.704582e-02, beta = 1.0004618641436922, step = -0.0009103548548915847
+GPT :     115.683836 s : non_linear_cg: iteration 290: f(x) = 1.682578503755264e+05, |df|/sqrt(dof) = 3.733706e-02, beta = 1.002233727052216, step = -0.0008957338531478627
+GPT :     116.603963 s : non_linear_cg: NOT converged in 300 iterations;  |df|/sqrt(dof) = 3.763525e-02 / 3.162278e-03
+GPT :     116.703999 s : non_linear_cg: iteration 0: f(x) = 1.682887216000975e+05, |df|/sqrt(dof) = 3.764518e-02, beta = 0, step = -0.1909045086181543
+GPT :     117.724404 s : non_linear_cg: iteration 10: f(x) = 1.683057924767736e+05, |df|/sqrt(dof) = 4.442232e-03, beta = 0.8129455362607988, step = -0.15209468354382363
+GPT :     118.768979 s : non_linear_cg: iteration 20: f(x) = 1.683069844479157e+05, |df|/sqrt(dof) = 3.074503e-03, beta = 1.1572140957128807, step = -0.14049097059534388
+GPT :     119.795488 s : non_linear_cg: iteration 30: f(x) = 1.683072661378405e+05, |df|/sqrt(dof) = 6.620701e-03, beta = 1.0568174767688079, step = -0.01811414221221438
+GPT :     120.821655 s : non_linear_cg: iteration 40: f(x) = 1.683074002949668e+05, |df|/sqrt(dof) = 7.113489e-03, beta = 1.014700102835621, step = -0.012047547163578467
+GPT :     121.846692 s : non_linear_cg: iteration 50: f(x) = 1.683082444789052e+05, |df|/sqrt(dof) = 7.562405e-03, beta = 1.0068698587846823, step = -0.01001349768477972
+GPT :     122.877132 s : non_linear_cg: iteration 60: f(x) = 1.683092026455660e+05, |df|/sqrt(dof) = 7.424156e-03, beta = 0.9930654204984091, step = -0.007207635108756096
+GPT :     123.916391 s : non_linear_cg: iteration 70: f(x) = 1.683100321659193e+05, |df|/sqrt(dof) = 7.804958e-03, beta = 1.0161780835873022, step = -0.005976593557478302
+GPT :     124.943006 s : non_linear_cg: iteration 80: f(x) = 1.683105043452691e+05, |df|/sqrt(dof) = 8.371118e-03, beta = 1.0129795859516966, step = -0.004235219476083678
+GPT :     125.969148 s : non_linear_cg: iteration 90: f(x) = 1.683103840900724e+05, |df|/sqrt(dof) = 8.771229e-03, beta = 1.0061018343457915, step = -0.0034221608522199396
+GPT :     126.996779 s : non_linear_cg: iteration 100: f(x) = 1.683102479059973e+05, |df|/sqrt(dof) = 9.007900e-03, beta = 1.0057029089558749, step = -0.0032068353915335824
+GPT :     128.017979 s : non_linear_cg: iteration 110: f(x) = 1.683102594569514e+05, |df|/sqrt(dof) = 9.267885e-03, beta = 1.0100046131153169, step = -0.0031486024740938227
+GPT :     129.047768 s : non_linear_cg: iteration 120: f(x) = 1.683103375546663e+05, |df|/sqrt(dof) = 1.094146e-02, beta = 1.055373526942347, step = -0.003009768055106118
+GPT :     130.076087 s : non_linear_cg: iteration 130: f(x) = 1.683100889263976e+05, |df|/sqrt(dof) = 1.454342e-02, beta = 1.0463136237718713, step = -0.0016995230141861077
+GPT :     131.100863 s : non_linear_cg: iteration 140: f(x) = 1.683098174172434e+05, |df|/sqrt(dof) = 1.683831e-02, beta = 1.0217126313239675, step = -0.0008651366624572317
+GPT :     132.124211 s : non_linear_cg: iteration 150: f(x) = 1.683097092438645e+05, |df|/sqrt(dof) = 1.833906e-02, beta = 1.0141593390707655, step = -0.000586146062448498
+GPT :     133.149203 s : non_linear_cg: iteration 160: f(x) = 1.683097111305016e+05, |df|/sqrt(dof) = 1.944497e-02, beta = 1.0103596290597496, step = -0.00046963765609211696
+GPT :     134.177013 s : non_linear_cg: iteration 170: f(x) = 1.683097005061123e+05, |df|/sqrt(dof) = 2.034365e-02, beta = 1.0078729311816101, step = -0.0004214586643733419
+GPT :     135.212563 s : non_linear_cg: iteration 180: f(x) = 1.683097315330157e+05, |df|/sqrt(dof) = 2.091611e-02, beta = 1.0033151873776882, step = -0.00040309383733440384
+GPT :     136.234597 s : non_linear_cg: iteration 190: f(x) = 1.683100189128753e+05, |df|/sqrt(dof) = 2.092258e-02, beta = 0.9974540612707988, step = -0.00039514617961377814
+GPT :     137.258477 s : non_linear_cg: iteration 200: f(x) = 1.683106216406748e+05, |df|/sqrt(dof) = 2.045473e-02, beta = 0.9947559271936722, step = -0.0003897479634166429
+GPT :     138.280915 s : non_linear_cg: iteration 210: f(x) = 1.683113408811088e+05, |df|/sqrt(dof) = 2.004973e-02, beta = 0.9975948548368133, step = -0.0003904960919770384
+GPT :     139.321002 s : non_linear_cg: iteration 220: f(x) = 1.683120203762749e+05, |df|/sqrt(dof) = 2.001047e-02, beta = 1.0009535394423585, step = -0.00039567947187829546
+GPT :     140.343572 s : non_linear_cg: iteration 230: f(x) = 1.683126716475647e+05, |df|/sqrt(dof) = 2.020251e-02, beta = 1.0025553211571137, step = -0.0003898418581822269
+GPT :     141.377330 s : non_linear_cg: iteration 240: f(x) = 1.683133266179726e+05, |df|/sqrt(dof) = 2.051126e-02, beta = 1.0031948890924387, step = -0.00036473881703248114
+GPT :     142.395836 s : non_linear_cg: iteration 250: f(x) = 1.683139174472919e+05, |df|/sqrt(dof) = 2.077733e-02, beta = 1.0018123558644851, step = -0.0003294738273031847
+GPT :     143.421914 s : non_linear_cg: iteration 260: f(x) = 1.683143457079191e+05, |df|/sqrt(dof) = 2.086571e-02, beta = 1.0002883171907804, step = -0.00029791391283135035
+GPT :     144.451285 s : non_linear_cg: iteration 270: f(x) = 1.683145767952682e+05, |df|/sqrt(dof) = 2.091137e-02, beta = 1.000890345812727, step = -0.00027704582541640327
+GPT :     145.483343 s : non_linear_cg: iteration 280: f(x) = 1.683146350741253e+05, |df|/sqrt(dof) = 2.111019e-02, beta = 1.0027307605322067, step = -0.00026610986958095574
+GPT :     146.517143 s : non_linear_cg: iteration 290: f(x) = 1.683145657987180e+05, |df|/sqrt(dof) = 2.146813e-02, beta = 1.0036213549917372, step = -0.00026139465850022703
+GPT :     147.440149 s : non_linear_cg: NOT converged in 300 iterations;  |df|/sqrt(dof) = 2.178841e-02 / 1.000000e-03
+GPT :     147.539821 s : non_linear_cg: iteration 0: f(x) = 1.683239397842430e+05, |df|/sqrt(dof) = 2.181773e-02, beta = 0, step = -0.20635262101191176
+GPT :     148.559749 s : non_linear_cg: iteration 10: f(x) = 1.683311572261656e+05, |df|/sqrt(dof) = 6.874407e-03, beta = 1.044870361365044, step = -0.07200835530508234
+GPT :     149.591130 s : non_linear_cg: iteration 20: f(x) = 1.683327580358108e+05, |df|/sqrt(dof) = 6.161524e-03, beta = 0.9335774197075075, step = -0.03160123215267862
+GPT :     150.616417 s : non_linear_cg: iteration 30: f(x) = 1.683334979268577e+05, |df|/sqrt(dof) = 4.359541e-03, beta = 0.9459683043996565, step = -0.03160242425507882
+GPT :     151.649717 s : non_linear_cg: iteration 40: f(x) = 1.683337991243081e+05, |df|/sqrt(dof) = 3.253864e-03, beta = 0.9181408559877609, step = -0.03033778333869481
+GPT :     152.680395 s : non_linear_cg: iteration 50: f(x) = 1.683340433520285e+05, |df|/sqrt(dof) = 2.200343e-03, beta = 0.953372795234434, step = -0.03274220763997098
+GPT :     153.707366 s : non_linear_cg: iteration 60: f(x) = 1.683341549404286e+05, |df|/sqrt(dof) = 1.915328e-03, beta = 0.9891048735571273, step = -0.029674147883789574
+GPT :     154.734809 s : non_linear_cg: iteration 70: f(x) = 1.683342688397529e+05, |df|/sqrt(dof) = 1.934460e-03, beta = 1.0184884600029291, step = -0.026116628352460588
+GPT :     155.769325 s : non_linear_cg: iteration 80: f(x) = 1.683343174421479e+05, |df|/sqrt(dof) = 1.490198e-03, beta = 0.926046851650845, step = -0.019457616209262594
+GPT :     156.795097 s : non_linear_cg: iteration 90: f(x) = 1.683343503950761e+05, |df|/sqrt(dof) = 1.329769e-03, beta = 1.001315616754125, step = -0.020467644262783625
+GPT :     157.823410 s : non_linear_cg: iteration 100: f(x) = 1.683343770197725e+05, |df|/sqrt(dof) = 1.183930e-03, beta = 0.9608794931535243, step = -0.02028643107250976
+GPT :     158.858874 s : non_linear_cg: iteration 110: f(x) = 1.683343908433464e+05, |df|/sqrt(dof) = 8.964346e-04, beta = 0.9644350409652097, step = -0.019639770789442415
+GPT :     159.899075 s : non_linear_cg: iteration 120: f(x) = 1.683344022133780e+05, |df|/sqrt(dof) = 9.100286e-04, beta = 1.018485360015166, step = -0.019534319661797184
+GPT :     160.929096 s : non_linear_cg: iteration 130: f(x) = 1.683344127716942e+05, |df|/sqrt(dof) = 7.522101e-04, beta = 0.9374790620561316, step = -0.016829923209633085
+GPT :     161.960799 s : non_linear_cg: iteration 140: f(x) = 1.683344150199067e+05, |df|/sqrt(dof) = 7.145508e-04, beta = 1.0262197680249119, step = -0.017044191923049082
+GPT :     162.990114 s : non_linear_cg: iteration 150: f(x) = 1.683344174775033e+05, |df|/sqrt(dof) = 6.515022e-04, beta = 0.9424382521632966, step = -0.016384070951032982
+GPT :     164.026748 s : non_linear_cg: iteration 160: f(x) = 1.683344255407240e+05, |df|/sqrt(dof) = 5.461916e-04, beta = 0.9863235225624201, step = -0.015592112093874741
+GPT :     165.058686 s : non_linear_cg: iteration 170: f(x) = 1.683344260232750e+05, |df|/sqrt(dof) = 5.104279e-04, beta = 0.9849420887054536, step = -0.015735367304256363
+GPT :     166.087943 s : non_linear_cg: iteration 180: f(x) = 1.683344274499765e+05, |df|/sqrt(dof) = 4.610765e-04, beta = 0.9641924194757203, step = -0.015754349360349067
+GPT :     167.112032 s : non_linear_cg: iteration 190: f(x) = 1.683344313880129e+05, |df|/sqrt(dof) = 3.879727e-04, beta = 0.9730294279236128, step = -0.01613329340784103
+GPT :     168.141689 s : non_linear_cg: iteration 200: f(x) = 1.683344326140319e+05, |df|/sqrt(dof) = 3.620383e-04, beta = 0.9911015180522632, step = -0.015801291018457547
+GPT :     169.163376 s : non_linear_cg: iteration 210: f(x) = 1.683344332342273e+05, |df|/sqrt(dof) = 3.155420e-04, beta = 0.9673372796068691, step = -0.016285354968277408
+GPT :     169.168504 s : non_linear_cg: converged in 211 iterations: f(x) = 1.683344332342273e+05, |df|/sqrt(dof) = 3.155420e-04
+GPT :     169.278062 s : non_linear_cg: iteration 0: f(x) = 1.683344355127166e+05, |df|/sqrt(dof) = 3.105916e-04, beta = 0, step = -0.27964852229838794
+GPT :     169.695996 s : non_linear_cg: converged in 5 iterations: f(x) = 1.683344379209302e+05, |df|/sqrt(dof) = 9.906807e-05
+GPT :     169.702621 s : Switching view to [1,1,1,1]/Write
+GPT :     169.716643 s : Wrote 0.00219727 GB at 0.156631 GB/s (0.214146 GB/s for distribution, 1.57943 GB/s for checksum, 1.08462 GB/s for writing, 1 views per node)
+GPT :     169.721601 s : Wrote 0.00219727 GB at 0.461608 GB/s (1.40061 GB/s for distribution, 1.61401 GB/s for checksum, 1.21327 GB/s for writing, 1 views per node)
+GPT :     169.726450 s : Wrote 0.00219727 GB at 0.469055 GB/s (1.48693 GB/s for distribution, 1.61883 GB/s for checksum, 1.19766 GB/s for writing, 1 views per node)
+GPT :     169.731335 s : Wrote 0.00219727 GB at 0.465431 GB/s (1.45134 GB/s for distribution, 1.60978 GB/s for checksum, 1.20408 GB/s for writing, 1 views per node)
+GPT :     169.740175 s : Completed writing configs/S8T32/wilson_b6.landau.1e-4.25 in 0.0393801 s
+=============================================
+               Finalized GPT                 
+=============================================

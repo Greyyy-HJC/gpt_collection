@@ -1,0 +1,1146 @@
+SharedMemoryNone: SharedMemoryAllocate 1073741824 GPU implementation 
+0SharedMemoryNone:  SharedMemoryNone.cc acceleratorAllocDevice 1073741824bytes at 0x7f51e0200000 for comms buffers 
+
+__|__|__|__|__|__|__|__|__|__|__|__|__|__|__
+__|__|__|__|__|__|__|__|__|__|__|__|__|__|__
+__|_ |  |  |  |  |  |  |  |  |  |  |  | _|__
+__|_                                    _|__
+__|_   GGGG    RRRR    III    DDDD      _|__
+__|_  G        R   R    I     D   D     _|__
+__|_  G        R   R    I     D    D    _|__
+__|_  G  GG    RRRR     I     D    D    _|__
+__|_  G   G    R  R     I     D   D     _|__
+__|_   GGGG    R   R   III    DDDD      _|__
+__|_                                    _|__
+__|__|__|__|__|__|__|__|__|__|__|__|__|__|__
+__|__|__|__|__|__|__|__|__|__|__|__|__|__|__
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+
+
+Copyright (C) 2015 Peter Boyle, Azusa Yamaguchi, Guido Cossu, Antonin Portelli and other authors
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+Current Grid git commit hash=f2648e94b92c9939e33f55e401ec2fab01d7f553: (grafted, HEAD -> feature/gpt, origin/feature/gpt) clean
+
+Grid : Message : ================================================ 
+Grid : Message : MPI is initialised and logging filters activated 
+Grid : Message : ================================================ 
+Grid : Message : Requested 1073741824 byte stencil comms buffers 
+Grid : Message : MemoryManager::Init() setting up
+Grid : Message : MemoryManager::Init() cache pool for recent host   allocations: SMALL 8 LARGE 2 HUGE 0
+Grid : Message : MemoryManager::Init() cache pool for recent device allocations: SMALL 16 LARGE 8 Huge 0
+Grid : Message : MemoryManager::Init() cache pool for recent shared allocations: SMALL 16 LARGE 8 Huge 0
+Grid : Message : MemoryManager::Init() Unified memory space
+
+=============================================
+              Initialized GPT                
+     Copyright (C) 2020 Christoph Lehner     
+=============================================
+GPT :       0.602715 s : Initializing gpt.random(T,vectorized_ranlux24_389_64) took 0.000177622 s
+GPT :       0.602859 s : Reading configs/S8T32/wilson_b6.coulomb.1e-9.42
+GPT :       0.603223 s : Switching view to [1,1,1,1]/Read
+GPT :       0.626792 s : Read 0.00219727 GB at 0.0931832 GB/s (0.105509 GB/s for distribution, 0.798337 GB/s for reading + checksum, 1.59391 GB/s for checksum, 1 views per node)
+GPT :       0.629675 s : Read 0.00219727 GB at 0.830195 GB/s (3.47119 GB/s for distribution, 1.09207 GB/s for reading + checksum, 1.58514 GB/s for checksum, 1 views per node)
+GPT :       0.632879 s : Read 0.00219727 GB at 0.702064 GB/s (1.76925 GB/s for distribution, 1.16496 GB/s for reading + checksum, 1.6095 GB/s for checksum, 1 views per node)
+GPT :       0.636216 s : Read 0.00219727 GB at 0.672308 GB/s (1.59116 GB/s for distribution, 1.16525 GB/s for reading + checksum, 1.61429 GB/s for checksum, 1 views per node)
+GPT :       0.636282 s : Completed reading configs/S8T32/wilson_b6.coulomb.1e-9.42 in 0.0334842 s
+GPT :       0.942171 s : non_linear_cg: iteration 0: f(x) = -2.535123493188678e+05, |df|/sqrt(dof) = 1.382914e+00, beta = 0, step = 0.10230803333427756
+GPT :       2.018914 s : non_linear_cg: iteration 10: f(x) = -2.558937122172676e+05, |df|/sqrt(dof) = 2.955987e-03, beta = 0.6046792158622801, step = 0.1527679656503882
+GPT :       3.089892 s : non_linear_cg: iteration 20: f(x) = -2.558938689893374e+05, |df|/sqrt(dof) = 3.691419e-04, beta = 0.6689774336107486, step = 0.16194173417379637
+GPT :       4.165776 s : non_linear_cg: iteration 30: f(x) = -2.558938726158659e+05, |df|/sqrt(dof) = 8.187333e-05, beta = 0.757470284463189, step = 0.175169180372348
+GPT :       5.248674 s : non_linear_cg: iteration 40: f(x) = -2.558938729001720e+05, |df|/sqrt(dof) = 2.836776e-05, beta = 0.8922022702556742, step = 0.15381146268351858
+GPT :       6.327055 s : non_linear_cg: iteration 50: f(x) = -2.558938729262800e+05, |df|/sqrt(dof) = 1.190978e-05, beta = 0.8877595851742376, step = 0.1707849688044419
+GPT :       7.405593 s : non_linear_cg: iteration 60: f(x) = -2.558938729336367e+05, |df|/sqrt(dof) = 9.041369e-06, beta = 0.7749877722771433, step = 0.08318433002171981
+GPT :       8.482908 s : non_linear_cg: iteration 70: f(x) = -2.558938729361458e+05, |df|/sqrt(dof) = 9.752780e-06, beta = 1.064629520457243, step = 0.09396202018308553
+GPT :       9.560408 s : non_linear_cg: iteration 80: f(x) = -2.558938729386881e+05, |df|/sqrt(dof) = 8.341646e-06, beta = 0.8572928590846268, step = 0.048624483128695294
+GPT :      10.635242 s : non_linear_cg: iteration 90: f(x) = -2.558938729402303e+05, |df|/sqrt(dof) = 7.504394e-06, beta = 0.8543927203382495, step = 0.065241194080507
+GPT :      11.715028 s : non_linear_cg: iteration 100: f(x) = -2.558938729414486e+05, |df|/sqrt(dof) = 5.905605e-06, beta = 1.217065858377777, step = 0.02898442288187691
+GPT :      12.788732 s : non_linear_cg: iteration 110: f(x) = -2.558938729421532e+05, |df|/sqrt(dof) = 3.962184e-06, beta = 0.759014328203465, step = 0.031460702950644855
+GPT :      13.867740 s : non_linear_cg: iteration 120: f(x) = -2.558938729423836e+05, |df|/sqrt(dof) = 3.020478e-06, beta = 1.0357889468185688, step = 0.03035998130905575
+GPT :      14.943340 s : non_linear_cg: iteration 130: f(x) = -2.558938729425152e+05, |df|/sqrt(dof) = 2.139062e-06, beta = 1.0192215607271533, step = 0.017644568356825027
+GPT :      16.020837 s : non_linear_cg: iteration 140: f(x) = -2.558938729425833e+05, |df|/sqrt(dof) = 1.787693e-06, beta = 0.9329378284132136, step = 0.025285495634093016
+GPT :      17.095442 s : non_linear_cg: iteration 150: f(x) = -2.558938729425926e+05, |df|/sqrt(dof) = 2.173076e-06, beta = 1.8637302659646078, step = -0.013670262494005226
+GPT :      18.171049 s : non_linear_cg: iteration 160: f(x) = -2.558938729426313e+05, |df|/sqrt(dof) = 1.485672e-06, beta = 1.0194676965813345, step = 0.01787284557264741
+GPT :      19.244340 s : non_linear_cg: iteration 170: f(x) = -2.558938729426462e+05, |df|/sqrt(dof) = 1.562101e-06, beta = 1.0121533982195727, step = 0.023083544989185065
+GPT :      20.320092 s : non_linear_cg: iteration 180: f(x) = -2.558938729426644e+05, |df|/sqrt(dof) = 1.116370e-06, beta = 0.9890444485349704, step = 0.04337474359415274
+GPT :      21.392850 s : non_linear_cg: iteration 190: f(x) = -2.558938729426804e+05, |df|/sqrt(dof) = 1.079106e-06, beta = 0.9882445480508701, step = 0.049873750026351346
+GPT :      22.469261 s : non_linear_cg: iteration 200: f(x) = -2.558938729426917e+05, |df|/sqrt(dof) = 1.087437e-06, beta = 0.009617583507473009, step = 0.023709395248167894
+GPT :      23.544156 s : non_linear_cg: iteration 210: f(x) = -2.558938729427016e+05, |df|/sqrt(dof) = 1.013538e-06, beta = 0.8683139149488984, step = 0.01882146283598472
+GPT :      24.620287 s : non_linear_cg: iteration 220: f(x) = -2.558938729427057e+05, |df|/sqrt(dof) = 1.098791e-06, beta = 0.9614597859461818, step = 0.0064420884684953375
+GPT :      25.692840 s : non_linear_cg: iteration 230: f(x) = -2.558938729427158e+05, |df|/sqrt(dof) = 9.702332e-07, beta = 1.113069741559492, step = 0.009289603191870825
+GPT :      26.768863 s : non_linear_cg: iteration 240: f(x) = -2.558938729427214e+05, |df|/sqrt(dof) = 9.822315e-07, beta = 1.0103395830058572, step = 0.0222257297902125
+GPT :      27.846018 s : non_linear_cg: iteration 250: f(x) = -2.558938729427255e+05, |df|/sqrt(dof) = 1.364558e-06, beta = 3.161217336872006, step = -0.025864918604141307
+GPT :      28.919900 s : non_linear_cg: iteration 260: f(x) = -2.558938729427283e+05, |df|/sqrt(dof) = 7.736768e-07, beta = 1.005321512581833, step = 0.03670714505976661
+GPT :      29.993776 s : non_linear_cg: iteration 270: f(x) = -2.558938729427331e+05, |df|/sqrt(dof) = 6.315731e-07, beta = 0.0060208606213534525, step = 0.011297410263421534
+GPT :      31.064086 s : non_linear_cg: iteration 280: f(x) = -2.558938729427346e+05, |df|/sqrt(dof) = 6.057746e-07, beta = 0.8119045164482912, step = 0.0137438953473
+GPT :      32.137507 s : non_linear_cg: iteration 290: f(x) = -2.558938729427343e+05, |df|/sqrt(dof) = 5.465186e-07, beta = 0.8726107247330398, step = 0.013084632404790712
+GPT :      33.207153 s : non_linear_cg: iteration 300: f(x) = -2.558938729426591e+05, |df|/sqrt(dof) = 5.108336e-07, beta = 1.0406833047156427, step = 0.18648445661999632
+GPT :      34.280047 s : non_linear_cg: iteration 310: f(x) = -2.558938729427354e+05, |df|/sqrt(dof) = 5.489813e-07, beta = 0.8578403365650829, step = 0.02227189371144215
+GPT :      35.349560 s : non_linear_cg: iteration 320: f(x) = -2.558938729427353e+05, |df|/sqrt(dof) = 5.392357e-07, beta = 1.0074535602130874, step = 0.011755369547672489
+GPT :      36.420702 s : non_linear_cg: iteration 330: f(x) = -2.558938729427365e+05, |df|/sqrt(dof) = 4.550688e-07, beta = 0.9517188321059499, step = 0.010354768876403075
+GPT :      37.489975 s : non_linear_cg: iteration 340: f(x) = -2.558938729427369e+05, |df|/sqrt(dof) = 4.502608e-07, beta = 0.667518022657159, step = 0.010240806847703284
+GPT :      38.561818 s : non_linear_cg: iteration 350: f(x) = -2.558938729427373e+05, |df|/sqrt(dof) = 4.558533e-07, beta = 1.3409760387684564, step = -0.015010247562252714
+GPT :      39.630669 s : non_linear_cg: iteration 360: f(x) = -2.558938729427365e+05, |df|/sqrt(dof) = 4.463242e-07, beta = 0.9847348418782234, step = 0.0005127801815440527
+GPT :      40.701140 s : non_linear_cg: iteration 370: f(x) = -2.558938729427365e+05, |df|/sqrt(dof) = 5.366084e-07, beta = 1.3855530685835014, step = -0.018883809079402267
+GPT :      41.770087 s : non_linear_cg: iteration 380: f(x) = -2.558938729427096e+05, |df|/sqrt(dof) = 4.633826e-07, beta = 1.0597765492869249, step = 0.11349797448020323
+GPT :      42.841147 s : non_linear_cg: iteration 390: f(x) = -2.558938729427343e+05, |df|/sqrt(dof) = 5.256063e-07, beta = 1.2808090040244764, step = -0.039291568900358
+GPT :      43.913010 s : non_linear_cg: iteration 400: f(x) = -2.558938729427365e+05, |df|/sqrt(dof) = 5.574189e-07, beta = 1.5058566971029665, step = -0.017999279114925364
+GPT :      44.983242 s : non_linear_cg: iteration 410: f(x) = -2.558938729427292e+05, |df|/sqrt(dof) = 4.815447e-07, beta = 1.0005055269979586, step = 0.06419956703317907
+GPT :      46.053694 s : non_linear_cg: iteration 420: f(x) = -2.558938729427368e+05, |df|/sqrt(dof) = 5.075081e-07, beta = 0.9117648841295577, step = 0.010609186401443925
+GPT :      47.123298 s : non_linear_cg: iteration 430: f(x) = -2.558938729427364e+05, |df|/sqrt(dof) = 5.073342e-07, beta = 0.9998719622461888, step = 0.005488112047687156
+GPT :      48.190902 s : non_linear_cg: iteration 440: f(x) = -2.558938729427362e+05, |df|/sqrt(dof) = 4.710774e-07, beta = 0.9382262317528922, step = 0.007897311146347384
+GPT :      49.264370 s : non_linear_cg: iteration 450: f(x) = -2.558938729427358e+05, |df|/sqrt(dof) = 5.439063e-07, beta = 0.0035465316402804696, step = 0.01170343709209474
+GPT :      50.331899 s : non_linear_cg: iteration 460: f(x) = -2.558938729427367e+05, |df|/sqrt(dof) = 4.478298e-07, beta = 0.9923211791015117, step = 0.007825950314400478
+GPT :      51.402760 s : non_linear_cg: iteration 470: f(x) = -2.558938729427375e+05, |df|/sqrt(dof) = 4.764849e-07, beta = 0.9411659194510806, step = 0.007709267053697344
+GPT :      52.470354 s : non_linear_cg: iteration 480: f(x) = -2.558938729427365e+05, |df|/sqrt(dof) = 5.082417e-07, beta = 1.2816842678478242, step = -0.004624839802700923
+GPT :      53.542298 s : non_linear_cg: iteration 490: f(x) = -2.558938729427364e+05, |df|/sqrt(dof) = 3.998254e-07, beta = 0.9968907969220329, step = 0.02357288472855065
+GPT :      54.615047 s : non_linear_cg: iteration 500: f(x) = -2.558938729427378e+05, |df|/sqrt(dof) = 4.264865e-07, beta = 0.9992920437767597, step = 0.012530883771303384
+GPT :      55.687930 s : non_linear_cg: iteration 510: f(x) = -2.558938729427376e+05, |df|/sqrt(dof) = 4.557522e-07, beta = 1.0649842625983263, step = -0.0029470830035027078
+GPT :      56.763183 s : non_linear_cg: iteration 520: f(x) = -2.558938729427381e+05, |df|/sqrt(dof) = 4.254741e-07, beta = 0.9326190941874349, step = 0.006329369575064859
+GPT :      57.834201 s : non_linear_cg: iteration 530: f(x) = -2.558938729427380e+05, |df|/sqrt(dof) = 4.100455e-07, beta = 0.9962244292732522, step = -0.0010311028852232206
+GPT :      58.908187 s : non_linear_cg: iteration 540: f(x) = -2.558938729427383e+05, |df|/sqrt(dof) = 3.686613e-07, beta = 0.9946406607857131, step = 0.004763546351887542
+GPT :      59.980043 s : non_linear_cg: iteration 550: f(x) = -2.558938729427385e+05, |df|/sqrt(dof) = 4.073178e-07, beta = 0.5778816094399224, step = 0.02118842449960833
+GPT :      61.053150 s : non_linear_cg: iteration 560: f(x) = -2.558938729427381e+05, |df|/sqrt(dof) = 3.749768e-07, beta = 0.9541758318447696, step = 0.016564659509333838
+GPT :      62.139235 s : non_linear_cg: iteration 570: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 5.591685e-07, beta = 2.0447764486386393, step = 0.012863752149115984
+GPT :      63.213796 s : non_linear_cg: iteration 580: f(x) = -2.558938729427382e+05, |df|/sqrt(dof) = 3.675720e-07, beta = 0.9520770087186895, step = -0.0016935377844437764
+GPT :      64.285882 s : non_linear_cg: iteration 590: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 3.555508e-07, beta = 0.9544046611639408, step = 0.0043055445769360386
+GPT :      65.358519 s : non_linear_cg: iteration 600: f(x) = -2.558938729427383e+05, |df|/sqrt(dof) = 3.403265e-07, beta = 0.9598442486576205, step = 0.006399794840830551
+GPT :      66.425996 s : non_linear_cg: iteration 610: f(x) = -2.558938729427383e+05, |df|/sqrt(dof) = 3.204887e-07, beta = 0.9593756458579255, step = 0.0009145256040919619
+GPT :      67.495123 s : non_linear_cg: iteration 620: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 3.329169e-07, beta = 0.9391019501628887, step = 0.004372087243198105
+GPT :      68.566764 s : non_linear_cg: iteration 630: f(x) = -2.558938729427380e+05, |df|/sqrt(dof) = 3.116800e-07, beta = 0.9991491107817358, step = 0.011741577921078454
+GPT :      69.641153 s : non_linear_cg: iteration 640: f(x) = -2.558938729427386e+05, |df|/sqrt(dof) = 3.250409e-07, beta = 0.9750327797036799, step = 0.005098145336614859
+GPT :      70.711350 s : non_linear_cg: iteration 650: f(x) = -2.558938729427384e+05, |df|/sqrt(dof) = 3.399978e-07, beta = 0.9994201313424946, step = 0.007094293858785134
+GPT :      71.786054 s : non_linear_cg: iteration 660: f(x) = -2.558938729427381e+05, |df|/sqrt(dof) = 3.395818e-07, beta = 1.031072192053983, step = 0.0032508280297025584
+GPT :      72.858401 s : non_linear_cg: iteration 670: f(x) = -2.558938729427382e+05, |df|/sqrt(dof) = 3.459227e-07, beta = 0.9434891879154035, step = 0.015672326097575278
+GPT :      73.933816 s : non_linear_cg: iteration 680: f(x) = -2.558938729427385e+05, |df|/sqrt(dof) = 3.412068e-07, beta = 0.972973538276409, step = 0.003615664692348187
+GPT :      75.005154 s : non_linear_cg: iteration 690: f(x) = -2.558938729427385e+05, |df|/sqrt(dof) = 3.507934e-07, beta = 0.9990764926369072, step = 0.005880524420509344
+GPT :      76.079812 s : non_linear_cg: iteration 700: f(x) = -2.558938729427376e+05, |df|/sqrt(dof) = 3.914190e-07, beta = 0.3133549748015602, step = -0.004721224469182052
+GPT :      77.151189 s : non_linear_cg: iteration 710: f(x) = -2.558938729427382e+05, |df|/sqrt(dof) = 3.436402e-07, beta = 0.6325446603960315, step = 0.0032834403565938255
+GPT :      78.225713 s : non_linear_cg: iteration 720: f(x) = -2.558938729427386e+05, |df|/sqrt(dof) = 3.411540e-07, beta = 0.9995903765300986, step = 0.00681867676150155
+GPT :      79.297485 s : non_linear_cg: iteration 730: f(x) = -2.558938729427381e+05, |df|/sqrt(dof) = 3.339131e-07, beta = 0.9532826303457509, step = 0.003888715873559137
+GPT :      80.366629 s : non_linear_cg: iteration 740: f(x) = -2.558938729427381e+05, |df|/sqrt(dof) = 3.436200e-07, beta = 1.011252276496687, step = 0.014754290484212488
+GPT :      81.439419 s : non_linear_cg: iteration 750: f(x) = -2.558938729427382e+05, |df|/sqrt(dof) = 3.152729e-07, beta = 1.0019475510563849, step = 0.003122014535236528
+GPT :      82.509486 s : non_linear_cg: iteration 760: f(x) = -2.558938729427354e+05, |df|/sqrt(dof) = 3.642694e-07, beta = 0.5710713276271382, step = 0.03946717752503643
+GPT :      83.583344 s : non_linear_cg: iteration 770: f(x) = -2.558938729427379e+05, |df|/sqrt(dof) = 3.391146e-07, beta = 0.9647368830000971, step = 0.006407716731319761
+GPT :      84.651511 s : non_linear_cg: iteration 780: f(x) = -2.558938729427380e+05, |df|/sqrt(dof) = 3.714141e-07, beta = 1.340260871199085, step = -0.009741619985343584
+GPT :      85.721358 s : non_linear_cg: iteration 790: f(x) = -2.558938729427382e+05, |df|/sqrt(dof) = 3.212770e-07, beta = 0.8447215039675632, step = -0.0010273922532510122
+GPT :      86.789837 s : non_linear_cg: iteration 800: f(x) = -2.558938729427378e+05, |df|/sqrt(dof) = 3.134165e-07, beta = 1.0003575143998653, step = 0.011365264289633378
+GPT :      87.863628 s : non_linear_cg: iteration 810: f(x) = -2.558938729427381e+05, |df|/sqrt(dof) = 3.143812e-07, beta = 1.092261831108392, step = -0.004316418154017203
+GPT :      88.933237 s : non_linear_cg: iteration 820: f(x) = -2.558938729427373e+05, |df|/sqrt(dof) = 3.652148e-07, beta = 1.2721147155843957, step = -0.01129429373625234
+GPT :      90.002056 s : non_linear_cg: iteration 830: f(x) = -2.558938729427375e+05, |df|/sqrt(dof) = 2.971562e-07, beta = 0.9951477036499748, step = 0.012523566161693103
+GPT :      91.070913 s : non_linear_cg: iteration 840: f(x) = -2.558938729427378e+05, |df|/sqrt(dof) = 3.184818e-07, beta = 1.104021939528019, step = 0.014977052302629086
+GPT :      92.142111 s : non_linear_cg: iteration 850: f(x) = -2.558938729427375e+05, |df|/sqrt(dof) = 2.875132e-07, beta = 0.9599360863279912, step = 0.017650792190460556
+GPT :      93.211605 s : non_linear_cg: iteration 860: f(x) = -2.558938729427376e+05, |df|/sqrt(dof) = 2.977388e-07, beta = 0.9789644664484496, step = 0.004589375047098905
+GPT :      94.280736 s : non_linear_cg: iteration 870: f(x) = -2.558938729427368e+05, |df|/sqrt(dof) = 3.149383e-07, beta = 1.0940092082196309, step = -0.007752196210161722
+GPT :      95.345481 s : non_linear_cg: iteration 880: f(x) = -2.558938729427375e+05, |df|/sqrt(dof) = 3.120086e-07, beta = 1.0060706964568538, step = 0.014802299514875666
+GPT :      96.417315 s : non_linear_cg: iteration 890: f(x) = -2.558938729427374e+05, |df|/sqrt(dof) = 3.277925e-07, beta = 0.8677249141535633, step = 0.008294532981112405
+GPT :      97.488759 s : non_linear_cg: iteration 900: f(x) = -2.558938729427373e+05, |df|/sqrt(dof) = 3.107835e-07, beta = 1.0001307461711864, step = 0.008522603991869007
+GPT :      98.562255 s : non_linear_cg: iteration 910: f(x) = -2.558938729427376e+05, |df|/sqrt(dof) = 3.238024e-07, beta = 0.9790296970330901, step = 0.002038408970698178
+GPT :      99.632301 s : non_linear_cg: iteration 920: f(x) = -2.558938729427369e+05, |df|/sqrt(dof) = 3.030043e-07, beta = 1.0561170208981565, step = -0.0025760836656374417
+GPT :     100.705430 s : non_linear_cg: iteration 930: f(x) = -2.558938729427369e+05, |df|/sqrt(dof) = 2.928471e-07, beta = 1.0029411843781586, step = 0.0012549529985368807
+GPT :     101.773721 s : non_linear_cg: iteration 940: f(x) = -2.558938729427371e+05, |df|/sqrt(dof) = 2.965561e-07, beta = 0.9878298421693692, step = 0.01109124400298264
+GPT :     102.842313 s : non_linear_cg: iteration 950: f(x) = -2.558938729427372e+05, |df|/sqrt(dof) = 2.985607e-07, beta = 0.9897159661398656, step = 0.002988195860689661
+GPT :     103.911477 s : non_linear_cg: iteration 960: f(x) = -2.558938729427364e+05, |df|/sqrt(dof) = 3.347682e-07, beta = 1.24206461970876, step = -0.006886132669691741
+GPT :     104.983267 s : non_linear_cg: iteration 970: f(x) = -2.558938729427370e+05, |df|/sqrt(dof) = 3.328053e-07, beta = 1.0128775322854935, step = 0.0056376035894728435
+GPT :     106.051056 s : non_linear_cg: iteration 980: f(x) = -2.558938729427362e+05, |df|/sqrt(dof) = 4.056022e-07, beta = 1.780731063530921, step = -0.015206643798422745
+GPT :     107.116652 s : non_linear_cg: iteration 990: f(x) = -2.558938729427366e+05, |df|/sqrt(dof) = 3.076471e-07, beta = 0.9492222091234139, step = 0.009391303570886146
+GPT :     108.063750 s : non_linear_cg: NOT converged in 1000 iterations;  |df|/sqrt(dof) = 3.099673e-07 / 1.000000e-09
+GPT :     108.133718 s : gradient_descent: iteration 0: f(x) = -2.558938729427371e+05, |df|/sqrt(dof) = 3.133394e-07, step = 0.01
+GPT :     108.654605 s : gradient_descent: iteration 10: f(x) = -2.558938729427380e+05, |df|/sqrt(dof) = 1.490908e-07, step = 0.01
+GPT :     109.172693 s : gradient_descent: iteration 20: f(x) = -2.558938729427377e+05, |df|/sqrt(dof) = 1.034135e-07, step = 0.01
+GPT :     109.691049 s : gradient_descent: iteration 30: f(x) = -2.558938729427385e+05, |df|/sqrt(dof) = 8.352820e-08, step = 0.01
+GPT :     110.211669 s : gradient_descent: iteration 40: f(x) = -2.558938729427381e+05, |df|/sqrt(dof) = 7.195407e-08, step = 0.01
+GPT :     110.729921 s : gradient_descent: iteration 50: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 6.411146e-08, step = 0.01
+GPT :     111.248141 s : gradient_descent: iteration 60: f(x) = -2.558938729427379e+05, |df|/sqrt(dof) = 5.831153e-08, step = 0.01
+GPT :     111.767101 s : gradient_descent: iteration 70: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 5.377409e-08, step = 0.01
+GPT :     112.288810 s : gradient_descent: iteration 80: f(x) = -2.558938729427381e+05, |df|/sqrt(dof) = 5.008348e-08, step = 0.01
+GPT :     112.805805 s : gradient_descent: iteration 90: f(x) = -2.558938729427384e+05, |df|/sqrt(dof) = 4.699577e-08, step = 0.01
+GPT :     113.325097 s : gradient_descent: iteration 100: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 4.435730e-08, step = 0.01
+GPT :     113.843804 s : gradient_descent: iteration 110: f(x) = -2.558938729427385e+05, |df|/sqrt(dof) = 4.206572e-08, step = 0.01
+GPT :     114.363046 s : gradient_descent: iteration 120: f(x) = -2.558938729427386e+05, |df|/sqrt(dof) = 4.004969e-08, step = 0.01
+GPT :     114.879855 s : gradient_descent: iteration 130: f(x) = -2.558938729427384e+05, |df|/sqrt(dof) = 3.825765e-08, step = 0.01
+GPT :     115.396600 s : gradient_descent: iteration 140: f(x) = -2.558938729427384e+05, |df|/sqrt(dof) = 3.665110e-08, step = 0.01
+GPT :     115.913075 s : gradient_descent: iteration 150: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 3.520058e-08, step = 0.01
+GPT :     116.432742 s : gradient_descent: iteration 160: f(x) = -2.558938729427384e+05, |df|/sqrt(dof) = 3.388304e-08, step = 0.01
+GPT :     116.951371 s : gradient_descent: iteration 170: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 3.268009e-08, step = 0.01
+GPT :     117.470115 s : gradient_descent: iteration 180: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 3.157681e-08, step = 0.01
+GPT :     117.987670 s : gradient_descent: iteration 190: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 3.056096e-08, step = 0.01
+GPT :     118.508237 s : gradient_descent: iteration 200: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 2.962234e-08, step = 0.01
+GPT :     119.025966 s : gradient_descent: iteration 210: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 2.875238e-08, step = 0.01
+GPT :     119.542937 s : gradient_descent: iteration 220: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 2.794378e-08, step = 0.01
+GPT :     120.059306 s : gradient_descent: iteration 230: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 2.719030e-08, step = 0.01
+GPT :     120.579861 s : gradient_descent: iteration 240: f(x) = -2.558938729427384e+05, |df|/sqrt(dof) = 2.648654e-08, step = 0.01
+GPT :     121.096827 s : gradient_descent: iteration 250: f(x) = -2.558938729427386e+05, |df|/sqrt(dof) = 2.582780e-08, step = 0.01
+GPT :     121.614460 s : gradient_descent: iteration 260: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 2.520997e-08, step = 0.01
+GPT :     122.142716 s : gradient_descent: iteration 270: f(x) = -2.558938729427385e+05, |df|/sqrt(dof) = 2.462943e-08, step = 0.01
+GPT :     122.673521 s : gradient_descent: iteration 280: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 2.408296e-08, step = 0.01
+GPT :     123.191346 s : gradient_descent: iteration 290: f(x) = -2.558938729427385e+05, |df|/sqrt(dof) = 2.356771e-08, step = 0.01
+GPT :     123.711117 s : gradient_descent: iteration 300: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 2.308112e-08, step = 0.01
+GPT :     124.230334 s : gradient_descent: iteration 310: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 2.262090e-08, step = 0.01
+GPT :     124.750512 s : gradient_descent: iteration 320: f(x) = -2.558938729427385e+05, |df|/sqrt(dof) = 2.218500e-08, step = 0.01
+GPT :     125.267144 s : gradient_descent: iteration 330: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 2.177153e-08, step = 0.01
+GPT :     125.783957 s : gradient_descent: iteration 340: f(x) = -2.558938729427386e+05, |df|/sqrt(dof) = 2.137883e-08, step = 0.01
+GPT :     126.301038 s : gradient_descent: iteration 350: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 2.100535e-08, step = 0.01
+GPT :     126.821123 s : gradient_descent: iteration 360: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.064970e-08, step = 0.01
+GPT :     127.338831 s : gradient_descent: iteration 370: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 2.031061e-08, step = 0.01
+GPT :     127.856264 s : gradient_descent: iteration 380: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.998691e-08, step = 0.01
+GPT :     128.373869 s : gradient_descent: iteration 390: f(x) = -2.558938729427386e+05, |df|/sqrt(dof) = 1.967754e-08, step = 0.01
+GPT :     128.894087 s : gradient_descent: iteration 400: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 1.938151e-08, step = 0.01
+GPT :     129.411734 s : gradient_descent: iteration 410: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.909795e-08, step = 0.01
+GPT :     129.928755 s : gradient_descent: iteration 420: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.882601e-08, step = 0.01
+GPT :     130.446284 s : gradient_descent: iteration 430: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.856494e-08, step = 0.01
+GPT :     130.965349 s : gradient_descent: iteration 440: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.831405e-08, step = 0.01
+GPT :     131.481990 s : gradient_descent: iteration 450: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 1.807269e-08, step = 0.01
+GPT :     131.998796 s : gradient_descent: iteration 460: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.784026e-08, step = 0.01
+GPT :     132.515583 s : gradient_descent: iteration 470: f(x) = -2.558938729427386e+05, |df|/sqrt(dof) = 1.761621e-08, step = 0.01
+GPT :     133.035428 s : gradient_descent: iteration 480: f(x) = -2.558938729427386e+05, |df|/sqrt(dof) = 1.740004e-08, step = 0.01
+GPT :     133.553490 s : gradient_descent: iteration 490: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 1.719127e-08, step = 0.01
+GPT :     134.070875 s : gradient_descent: iteration 500: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.698947e-08, step = 0.01
+GPT :     134.588422 s : gradient_descent: iteration 510: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.679424e-08, step = 0.01
+GPT :     135.108375 s : gradient_descent: iteration 520: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.660519e-08, step = 0.01
+GPT :     135.627232 s : gradient_descent: iteration 530: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 1.642199e-08, step = 0.01
+GPT :     136.146045 s : gradient_descent: iteration 540: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.624430e-08, step = 0.01
+GPT :     136.664431 s : gradient_descent: iteration 550: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 1.607184e-08, step = 0.01
+GPT :     137.183415 s : gradient_descent: iteration 560: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.590431e-08, step = 0.01
+GPT :     137.699511 s : gradient_descent: iteration 570: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 1.574146e-08, step = 0.01
+GPT :     138.216344 s : gradient_descent: iteration 580: f(x) = -2.558938729427386e+05, |df|/sqrt(dof) = 1.558305e-08, step = 0.01
+GPT :     138.734523 s : gradient_descent: iteration 590: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 1.542885e-08, step = 0.01
+GPT :     139.255615 s : gradient_descent: iteration 600: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.527865e-08, step = 0.01
+GPT :     139.772390 s : gradient_descent: iteration 610: f(x) = -2.558938729427386e+05, |df|/sqrt(dof) = 1.513225e-08, step = 0.01
+GPT :     140.287994 s : gradient_descent: iteration 620: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 1.498947e-08, step = 0.01
+GPT :     140.803312 s : gradient_descent: iteration 630: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.485014e-08, step = 0.01
+GPT :     141.322409 s : gradient_descent: iteration 640: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.471410e-08, step = 0.01
+GPT :     141.838585 s : gradient_descent: iteration 650: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.458120e-08, step = 0.01
+GPT :     142.356254 s : gradient_descent: iteration 660: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.445130e-08, step = 0.01
+GPT :     142.874212 s : gradient_descent: iteration 670: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.432426e-08, step = 0.01
+GPT :     143.394222 s : gradient_descent: iteration 680: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.419996e-08, step = 0.01
+GPT :     143.912399 s : gradient_descent: iteration 690: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.407828e-08, step = 0.01
+GPT :     144.430993 s : gradient_descent: iteration 700: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.395913e-08, step = 0.01
+GPT :     144.947580 s : gradient_descent: iteration 710: f(x) = -2.558938729427382e+05, |df|/sqrt(dof) = 1.384238e-08, step = 0.01
+GPT :     145.468133 s : gradient_descent: iteration 720: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.372796e-08, step = 0.01
+GPT :     145.986097 s : gradient_descent: iteration 730: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.361575e-08, step = 0.01
+GPT :     146.504288 s : gradient_descent: iteration 740: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.350569e-08, step = 0.01
+GPT :     147.022089 s : gradient_descent: iteration 750: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.339769e-08, step = 0.01
+GPT :     147.542217 s : gradient_descent: iteration 760: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.329168e-08, step = 0.01
+GPT :     148.058414 s : gradient_descent: iteration 770: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.318757e-08, step = 0.01
+GPT :     148.575900 s : gradient_descent: iteration 780: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 1.308531e-08, step = 0.01
+GPT :     149.094827 s : gradient_descent: iteration 790: f(x) = -2.558938729427386e+05, |df|/sqrt(dof) = 1.298482e-08, step = 0.01
+GPT :     149.615352 s : gradient_descent: iteration 800: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.288606e-08, step = 0.01
+GPT :     150.131074 s : gradient_descent: iteration 810: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.278896e-08, step = 0.01
+GPT :     150.649154 s : gradient_descent: iteration 820: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 1.269346e-08, step = 0.01
+GPT :     151.166803 s : gradient_descent: iteration 830: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 1.259951e-08, step = 0.01
+GPT :     151.686607 s : gradient_descent: iteration 840: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.250707e-08, step = 0.01
+GPT :     152.204003 s : gradient_descent: iteration 850: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 1.241609e-08, step = 0.01
+GPT :     152.721206 s : gradient_descent: iteration 860: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.232652e-08, step = 0.01
+GPT :     153.239242 s : gradient_descent: iteration 870: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.223832e-08, step = 0.01
+GPT :     153.760669 s : gradient_descent: iteration 880: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.215146e-08, step = 0.01
+GPT :     154.280110 s : gradient_descent: iteration 890: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.206588e-08, step = 0.01
+GPT :     154.799089 s : gradient_descent: iteration 900: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.198156e-08, step = 0.01
+GPT :     155.318979 s : gradient_descent: iteration 910: f(x) = -2.558938729427386e+05, |df|/sqrt(dof) = 1.189847e-08, step = 0.01
+GPT :     155.839494 s : gradient_descent: iteration 920: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.181656e-08, step = 0.01
+GPT :     156.358521 s : gradient_descent: iteration 930: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.173580e-08, step = 0.01
+GPT :     156.877305 s : gradient_descent: iteration 940: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.165617e-08, step = 0.01
+GPT :     157.398670 s : gradient_descent: iteration 950: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.157763e-08, step = 0.01
+GPT :     157.920878 s : gradient_descent: iteration 960: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.150017e-08, step = 0.01
+GPT :     158.440248 s : gradient_descent: iteration 970: f(x) = -2.558938729427397e+05, |df|/sqrt(dof) = 1.142374e-08, step = 0.01
+GPT :     158.960070 s : gradient_descent: iteration 980: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.134833e-08, step = 0.01
+GPT :     159.482097 s : gradient_descent: iteration 990: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.127391e-08, step = 0.01
+GPT :     160.000241 s : gradient_descent: iteration 1000: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.120045e-08, step = 0.01
+GPT :     160.518841 s : gradient_descent: iteration 1010: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.112795e-08, step = 0.01
+GPT :     161.036515 s : gradient_descent: iteration 1020: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.105636e-08, step = 0.01
+GPT :     161.558125 s : gradient_descent: iteration 1030: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 1.098567e-08, step = 0.01
+GPT :     162.076036 s : gradient_descent: iteration 1040: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 1.091587e-08, step = 0.01
+GPT :     162.599919 s : gradient_descent: iteration 1050: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.084692e-08, step = 0.01
+GPT :     163.117846 s : gradient_descent: iteration 1060: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.077883e-08, step = 0.01
+GPT :     163.636849 s : gradient_descent: iteration 1070: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.071155e-08, step = 0.01
+GPT :     164.152095 s : gradient_descent: iteration 1080: f(x) = -2.558938729427397e+05, |df|/sqrt(dof) = 1.064508e-08, step = 0.01
+GPT :     164.669002 s : gradient_descent: iteration 1090: f(x) = -2.558938729427384e+05, |df|/sqrt(dof) = 1.057941e-08, step = 0.01
+GPT :     165.185254 s : gradient_descent: iteration 1100: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.051450e-08, step = 0.01
+GPT :     165.705645 s : gradient_descent: iteration 1110: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.045036e-08, step = 0.01
+GPT :     166.222003 s : gradient_descent: iteration 1120: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.038696e-08, step = 0.01
+GPT :     166.738648 s : gradient_descent: iteration 1130: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 1.032429e-08, step = 0.01
+GPT :     167.255471 s : gradient_descent: iteration 1140: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 1.026233e-08, step = 0.01
+GPT :     167.774685 s : gradient_descent: iteration 1150: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.020107e-08, step = 0.01
+GPT :     168.291650 s : gradient_descent: iteration 1160: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 1.014051e-08, step = 0.01
+GPT :     168.808083 s : gradient_descent: iteration 1170: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.008061e-08, step = 0.01
+GPT :     169.324545 s : gradient_descent: iteration 1180: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.002138e-08, step = 0.01
+GPT :     169.843281 s : gradient_descent: iteration 1190: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 9.962802e-09, step = 0.01
+GPT :     170.358623 s : gradient_descent: iteration 1200: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 9.904859e-09, step = 0.01
+GPT :     170.874075 s : gradient_descent: iteration 1210: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 9.847544e-09, step = 0.01
+GPT :     171.390851 s : gradient_descent: iteration 1220: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 9.790845e-09, step = 0.01
+GPT :     171.909155 s : gradient_descent: iteration 1230: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 9.734751e-09, step = 0.01
+GPT :     172.424794 s : gradient_descent: iteration 1240: f(x) = -2.558938729427386e+05, |df|/sqrt(dof) = 9.679251e-09, step = 0.01
+GPT :     172.940305 s : gradient_descent: iteration 1250: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 9.624337e-09, step = 0.01
+GPT :     173.456054 s : gradient_descent: iteration 1260: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 9.569997e-09, step = 0.01
+GPT :     173.973985 s : gradient_descent: iteration 1270: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 9.516222e-09, step = 0.01
+GPT :     174.490813 s : gradient_descent: iteration 1280: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 9.463004e-09, step = 0.01
+GPT :     175.006437 s : gradient_descent: iteration 1290: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 9.410332e-09, step = 0.01
+GPT :     175.523789 s : gradient_descent: iteration 1300: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 9.358198e-09, step = 0.01
+GPT :     176.043332 s : gradient_descent: iteration 1310: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 9.306593e-09, step = 0.01
+GPT :     176.561560 s : gradient_descent: iteration 1320: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 9.255509e-09, step = 0.01
+GPT :     177.078525 s : gradient_descent: iteration 1330: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 9.204937e-09, step = 0.01
+GPT :     177.597020 s : gradient_descent: iteration 1340: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 9.154871e-09, step = 0.01
+GPT :     178.115997 s : gradient_descent: iteration 1350: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 9.105301e-09, step = 0.01
+GPT :     178.633024 s : gradient_descent: iteration 1360: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 9.056220e-09, step = 0.01
+GPT :     179.149833 s : gradient_descent: iteration 1370: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 9.007621e-09, step = 0.01
+GPT :     179.666823 s : gradient_descent: iteration 1380: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 8.959497e-09, step = 0.01
+GPT :     180.185098 s : gradient_descent: iteration 1390: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 8.911840e-09, step = 0.01
+GPT :     180.701598 s : gradient_descent: iteration 1400: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 8.864644e-09, step = 0.01
+GPT :     181.219331 s : gradient_descent: iteration 1410: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 8.817902e-09, step = 0.01
+GPT :     181.735491 s : gradient_descent: iteration 1420: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 8.771607e-09, step = 0.01
+GPT :     182.254851 s : gradient_descent: iteration 1430: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 8.725752e-09, step = 0.01
+GPT :     182.789489 s : gradient_descent: iteration 1440: f(x) = -2.558938729427384e+05, |df|/sqrt(dof) = 8.680332e-09, step = 0.01
+GPT :     183.315862 s : gradient_descent: iteration 1450: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 8.635341e-09, step = 0.01
+GPT :     183.832990 s : gradient_descent: iteration 1460: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 8.590771e-09, step = 0.01
+GPT :     184.351799 s : gradient_descent: iteration 1470: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 8.546618e-09, step = 0.01
+GPT :     184.869193 s : gradient_descent: iteration 1480: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 8.502875e-09, step = 0.01
+GPT :     185.386459 s : gradient_descent: iteration 1490: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 8.459538e-09, step = 0.01
+GPT :     185.903177 s : gradient_descent: iteration 1500: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 8.416599e-09, step = 0.01
+GPT :     186.422403 s : gradient_descent: iteration 1510: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 8.374054e-09, step = 0.01
+GPT :     186.939121 s : gradient_descent: iteration 1520: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 8.331898e-09, step = 0.01
+GPT :     187.457011 s : gradient_descent: iteration 1530: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 8.290125e-09, step = 0.01
+GPT :     187.973922 s : gradient_descent: iteration 1540: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 8.248731e-09, step = 0.01
+GPT :     188.493887 s : gradient_descent: iteration 1550: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 8.207709e-09, step = 0.01
+GPT :     189.010102 s : gradient_descent: iteration 1560: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 8.167056e-09, step = 0.01
+GPT :     189.527474 s : gradient_descent: iteration 1570: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 8.126766e-09, step = 0.01
+GPT :     190.043528 s : gradient_descent: iteration 1580: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 8.086835e-09, step = 0.01
+GPT :     190.562854 s : gradient_descent: iteration 1590: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 8.047258e-09, step = 0.01
+GPT :     191.079072 s : gradient_descent: iteration 1600: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 8.008031e-09, step = 0.01
+GPT :     191.596086 s : gradient_descent: iteration 1610: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 7.969148e-09, step = 0.01
+GPT :     192.112246 s : gradient_descent: iteration 1620: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 7.930606e-09, step = 0.01
+GPT :     192.631943 s : gradient_descent: iteration 1630: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 7.892400e-09, step = 0.01
+GPT :     193.148139 s : gradient_descent: iteration 1640: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 7.854527e-09, step = 0.01
+GPT :     193.664788 s : gradient_descent: iteration 1650: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 7.816981e-09, step = 0.01
+GPT :     194.180893 s : gradient_descent: iteration 1660: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 7.779759e-09, step = 0.01
+GPT :     194.700149 s : gradient_descent: iteration 1670: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 7.742857e-09, step = 0.01
+GPT :     195.216677 s : gradient_descent: iteration 1680: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 7.706271e-09, step = 0.01
+GPT :     195.732425 s : gradient_descent: iteration 1690: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 7.669997e-09, step = 0.01
+GPT :     196.248192 s : gradient_descent: iteration 1700: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 7.634031e-09, step = 0.01
+GPT :     196.766623 s : gradient_descent: iteration 1710: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 7.598370e-09, step = 0.01
+GPT :     197.283117 s : gradient_descent: iteration 1720: f(x) = -2.558938729427397e+05, |df|/sqrt(dof) = 7.563009e-09, step = 0.01
+GPT :     197.798172 s : gradient_descent: iteration 1730: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 7.527946e-09, step = 0.01
+GPT :     198.314591 s : gradient_descent: iteration 1740: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 7.493176e-09, step = 0.01
+GPT :     198.833440 s : gradient_descent: iteration 1750: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 7.458696e-09, step = 0.01
+GPT :     199.348921 s : gradient_descent: iteration 1760: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 7.424503e-09, step = 0.01
+GPT :     199.864858 s : gradient_descent: iteration 1770: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 7.390593e-09, step = 0.01
+GPT :     200.380174 s : gradient_descent: iteration 1780: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 7.356963e-09, step = 0.01
+GPT :     200.898450 s : gradient_descent: iteration 1790: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 7.323609e-09, step = 0.01
+GPT :     201.413650 s : gradient_descent: iteration 1800: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 7.290529e-09, step = 0.01
+GPT :     201.929392 s : gradient_descent: iteration 1810: f(x) = -2.558938729427397e+05, |df|/sqrt(dof) = 7.257720e-09, step = 0.01
+GPT :     202.445318 s : gradient_descent: iteration 1820: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 7.225177e-09, step = 0.01
+GPT :     202.962382 s : gradient_descent: iteration 1830: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 7.192899e-09, step = 0.01
+GPT :     203.478765 s : gradient_descent: iteration 1840: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 7.160881e-09, step = 0.01
+GPT :     203.993718 s : gradient_descent: iteration 1850: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 7.129121e-09, step = 0.01
+GPT :     204.508431 s : gradient_descent: iteration 1860: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 7.097617e-09, step = 0.01
+GPT :     205.025822 s : gradient_descent: iteration 1870: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 7.066365e-09, step = 0.01
+GPT :     205.541911 s : gradient_descent: iteration 1880: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 7.035362e-09, step = 0.01
+GPT :     206.056437 s : gradient_descent: iteration 1890: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 7.004605e-09, step = 0.01
+GPT :     206.571603 s : gradient_descent: iteration 1900: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 6.974093e-09, step = 0.01
+GPT :     207.088972 s : gradient_descent: iteration 1910: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 6.943821e-09, step = 0.01
+GPT :     207.604903 s : gradient_descent: iteration 1920: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 6.913787e-09, step = 0.01
+GPT :     208.120654 s : gradient_descent: iteration 1930: f(x) = -2.558938729427386e+05, |df|/sqrt(dof) = 6.883990e-09, step = 0.01
+GPT :     208.636325 s : gradient_descent: iteration 1940: f(x) = -2.558938729427385e+05, |df|/sqrt(dof) = 6.854425e-09, step = 0.01
+GPT :     209.155077 s : gradient_descent: iteration 1950: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 6.825091e-09, step = 0.01
+GPT :     209.670602 s : gradient_descent: iteration 1960: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 6.795985e-09, step = 0.01
+GPT :     210.186297 s : gradient_descent: iteration 1970: f(x) = -2.558938729427400e+05, |df|/sqrt(dof) = 6.767104e-09, step = 0.01
+GPT :     210.702300 s : gradient_descent: iteration 1980: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 6.738446e-09, step = 0.01
+GPT :     211.220818 s : gradient_descent: iteration 1990: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 6.710009e-09, step = 0.01
+GPT :     211.737286 s : gradient_descent: iteration 2000: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 6.681790e-09, step = 0.01
+GPT :     212.253497 s : gradient_descent: iteration 2010: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 6.653786e-09, step = 0.01
+GPT :     212.770025 s : gradient_descent: iteration 2020: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 6.625997e-09, step = 0.01
+GPT :     213.288502 s : gradient_descent: iteration 2030: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 6.598418e-09, step = 0.01
+GPT :     213.804788 s : gradient_descent: iteration 2040: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 6.571048e-09, step = 0.01
+GPT :     214.320955 s : gradient_descent: iteration 2050: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 6.543885e-09, step = 0.01
+GPT :     214.836478 s : gradient_descent: iteration 2060: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 6.516926e-09, step = 0.01
+GPT :     215.354990 s : gradient_descent: iteration 2070: f(x) = -2.558938729427397e+05, |df|/sqrt(dof) = 6.490170e-09, step = 0.01
+GPT :     215.871174 s : gradient_descent: iteration 2080: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 6.463614e-09, step = 0.01
+GPT :     216.386729 s : gradient_descent: iteration 2090: f(x) = -2.558938729427400e+05, |df|/sqrt(dof) = 6.437255e-09, step = 0.01
+GPT :     216.902033 s : gradient_descent: iteration 2100: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 6.411093e-09, step = 0.01
+GPT :     217.419597 s : gradient_descent: iteration 2110: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 6.385125e-09, step = 0.01
+GPT :     217.935294 s : gradient_descent: iteration 2120: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 6.359348e-09, step = 0.01
+GPT :     218.450632 s : gradient_descent: iteration 2130: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 6.333761e-09, step = 0.01
+GPT :     218.966246 s : gradient_descent: iteration 2140: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 6.308362e-09, step = 0.01
+GPT :     219.484694 s : gradient_descent: iteration 2150: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 6.283149e-09, step = 0.01
+GPT :     219.999519 s : gradient_descent: iteration 2160: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 6.258120e-09, step = 0.01
+GPT :     220.514282 s : gradient_descent: iteration 2170: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 6.233272e-09, step = 0.01
+GPT :     221.030222 s : gradient_descent: iteration 2180: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 6.208605e-09, step = 0.01
+GPT :     221.548874 s : gradient_descent: iteration 2190: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 6.184116e-09, step = 0.01
+GPT :     222.063837 s : gradient_descent: iteration 2200: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 6.159804e-09, step = 0.01
+GPT :     222.580903 s : gradient_descent: iteration 2210: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 6.135666e-09, step = 0.01
+GPT :     223.095795 s : gradient_descent: iteration 2220: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 6.111701e-09, step = 0.01
+GPT :     223.613672 s : gradient_descent: iteration 2230: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 6.087908e-09, step = 0.01
+GPT :     224.128629 s : gradient_descent: iteration 2240: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 6.064283e-09, step = 0.01
+GPT :     224.643562 s : gradient_descent: iteration 2250: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 6.040826e-09, step = 0.01
+GPT :     225.157641 s : gradient_descent: iteration 2260: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 6.017535e-09, step = 0.01
+GPT :     225.674393 s : gradient_descent: iteration 2270: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 5.994409e-09, step = 0.01
+GPT :     226.189417 s : gradient_descent: iteration 2280: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 5.971445e-09, step = 0.01
+GPT :     226.704805 s : gradient_descent: iteration 2290: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 5.948642e-09, step = 0.01
+GPT :     227.218885 s : gradient_descent: iteration 2300: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 5.925998e-09, step = 0.01
+GPT :     227.735143 s : gradient_descent: iteration 2310: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 5.903512e-09, step = 0.01
+GPT :     228.250270 s : gradient_descent: iteration 2320: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 5.881182e-09, step = 0.01
+GPT :     228.764613 s : gradient_descent: iteration 2330: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 5.859006e-09, step = 0.01
+GPT :     229.278461 s : gradient_descent: iteration 2340: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 5.836984e-09, step = 0.01
+GPT :     229.797499 s : gradient_descent: iteration 2350: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 5.815113e-09, step = 0.01
+GPT :     230.312293 s : gradient_descent: iteration 2360: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 5.793392e-09, step = 0.01
+GPT :     230.827368 s : gradient_descent: iteration 2370: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 5.771820e-09, step = 0.01
+GPT :     231.342360 s : gradient_descent: iteration 2380: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 5.750395e-09, step = 0.01
+GPT :     231.859662 s : gradient_descent: iteration 2390: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 5.729115e-09, step = 0.01
+GPT :     232.374727 s : gradient_descent: iteration 2400: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 5.707980e-09, step = 0.01
+GPT :     232.889479 s : gradient_descent: iteration 2410: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 5.686987e-09, step = 0.01
+GPT :     233.405782 s : gradient_descent: iteration 2420: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 5.666136e-09, step = 0.01
+GPT :     233.923046 s : gradient_descent: iteration 2430: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 5.645424e-09, step = 0.01
+GPT :     234.438143 s : gradient_descent: iteration 2440: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 5.624852e-09, step = 0.01
+GPT :     234.953352 s : gradient_descent: iteration 2450: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 5.604416e-09, step = 0.01
+GPT :     235.469015 s : gradient_descent: iteration 2460: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 5.584117e-09, step = 0.01
+GPT :     235.985226 s : gradient_descent: iteration 2470: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 5.563952e-09, step = 0.01
+GPT :     236.500164 s : gradient_descent: iteration 2480: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 5.543920e-09, step = 0.01
+GPT :     237.015030 s : gradient_descent: iteration 2490: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 5.524021e-09, step = 0.01
+GPT :     237.530289 s : gradient_descent: iteration 2500: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 5.504252e-09, step = 0.01
+GPT :     238.047101 s : gradient_descent: iteration 2510: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 5.484613e-09, step = 0.01
+GPT :     238.562279 s : gradient_descent: iteration 2520: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 5.465101e-09, step = 0.01
+GPT :     239.077227 s : gradient_descent: iteration 2530: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 5.445717e-09, step = 0.01
+GPT :     239.592882 s : gradient_descent: iteration 2540: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 5.426459e-09, step = 0.01
+GPT :     240.110916 s : gradient_descent: iteration 2550: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 5.407325e-09, step = 0.01
+GPT :     240.626344 s : gradient_descent: iteration 2560: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 5.388315e-09, step = 0.01
+GPT :     241.141123 s : gradient_descent: iteration 2570: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 5.369427e-09, step = 0.01
+GPT :     241.658501 s : gradient_descent: iteration 2580: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 5.350660e-09, step = 0.01
+GPT :     242.178882 s : gradient_descent: iteration 2590: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 5.332013e-09, step = 0.01
+GPT :     242.697075 s : gradient_descent: iteration 2600: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 5.313485e-09, step = 0.01
+GPT :     243.224058 s : gradient_descent: iteration 2610: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 5.295074e-09, step = 0.01
+GPT :     243.754597 s : gradient_descent: iteration 2620: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 5.276780e-09, step = 0.01
+GPT :     244.276320 s : gradient_descent: iteration 2630: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 5.258601e-09, step = 0.01
+GPT :     244.795494 s : gradient_descent: iteration 2640: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 5.240537e-09, step = 0.01
+GPT :     245.313717 s : gradient_descent: iteration 2650: f(x) = -2.558938729427397e+05, |df|/sqrt(dof) = 5.222586e-09, step = 0.01
+GPT :     245.832075 s : gradient_descent: iteration 2660: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 5.204747e-09, step = 0.01
+GPT :     246.348669 s : gradient_descent: iteration 2670: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 5.187020e-09, step = 0.01
+GPT :     246.864642 s : gradient_descent: iteration 2680: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 5.169403e-09, step = 0.01
+GPT :     247.380636 s : gradient_descent: iteration 2690: f(x) = -2.558938729427397e+05, |df|/sqrt(dof) = 5.151894e-09, step = 0.01
+GPT :     247.899339 s : gradient_descent: iteration 2700: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 5.134494e-09, step = 0.01
+GPT :     248.420895 s : gradient_descent: iteration 2710: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 5.117201e-09, step = 0.01
+GPT :     248.939099 s : gradient_descent: iteration 2720: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 5.100014e-09, step = 0.01
+GPT :     249.455968 s : gradient_descent: iteration 2730: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 5.082933e-09, step = 0.01
+GPT :     249.975150 s : gradient_descent: iteration 2740: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 5.065955e-09, step = 0.01
+GPT :     250.492315 s : gradient_descent: iteration 2750: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 5.049081e-09, step = 0.01
+GPT :     251.008060 s : gradient_descent: iteration 2760: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 5.032309e-09, step = 0.01
+GPT :     251.525087 s : gradient_descent: iteration 2770: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 5.015638e-09, step = 0.01
+GPT :     252.043386 s : gradient_descent: iteration 2780: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 4.999067e-09, step = 0.01
+GPT :     252.560434 s : gradient_descent: iteration 2790: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 4.982596e-09, step = 0.01
+GPT :     253.076544 s : gradient_descent: iteration 2800: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 4.966224e-09, step = 0.01
+GPT :     253.593468 s : gradient_descent: iteration 2810: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 4.949949e-09, step = 0.01
+GPT :     254.111517 s : gradient_descent: iteration 2820: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 4.933772e-09, step = 0.01
+GPT :     254.628073 s : gradient_descent: iteration 2830: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 4.917690e-09, step = 0.01
+GPT :     255.143976 s : gradient_descent: iteration 2840: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 4.901703e-09, step = 0.01
+GPT :     255.661175 s : gradient_descent: iteration 2850: f(x) = -2.558938729427399e+05, |df|/sqrt(dof) = 4.885810e-09, step = 0.01
+GPT :     256.180175 s : gradient_descent: iteration 2860: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 4.870010e-09, step = 0.01
+GPT :     256.696984 s : gradient_descent: iteration 2870: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 4.854303e-09, step = 0.01
+GPT :     257.212992 s : gradient_descent: iteration 2880: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 4.838688e-09, step = 0.01
+GPT :     257.729109 s : gradient_descent: iteration 2890: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 4.823164e-09, step = 0.01
+GPT :     258.248089 s : gradient_descent: iteration 2900: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 4.807729e-09, step = 0.01
+GPT :     258.765722 s : gradient_descent: iteration 2910: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 4.792384e-09, step = 0.01
+GPT :     259.281876 s : gradient_descent: iteration 2920: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 4.777127e-09, step = 0.01
+GPT :     259.799296 s : gradient_descent: iteration 2930: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 4.761958e-09, step = 0.01
+GPT :     260.317879 s : gradient_descent: iteration 2940: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 4.746875e-09, step = 0.01
+GPT :     260.834314 s : gradient_descent: iteration 2950: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 4.731879e-09, step = 0.01
+GPT :     261.350925 s : gradient_descent: iteration 2960: f(x) = -2.558938729427400e+05, |df|/sqrt(dof) = 4.716968e-09, step = 0.01
+GPT :     261.867988 s : gradient_descent: iteration 2970: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 4.702142e-09, step = 0.01
+GPT :     262.385892 s : gradient_descent: iteration 2980: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 4.687399e-09, step = 0.01
+GPT :     262.902520 s : gradient_descent: iteration 2990: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 4.672739e-09, step = 0.01
+GPT :     263.419330 s : gradient_descent: iteration 3000: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 4.658162e-09, step = 0.01
+GPT :     263.936097 s : gradient_descent: iteration 3010: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 4.643666e-09, step = 0.01
+GPT :     264.454443 s : gradient_descent: iteration 3020: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 4.629252e-09, step = 0.01
+GPT :     264.970696 s : gradient_descent: iteration 3030: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 4.614917e-09, step = 0.01
+GPT :     265.487664 s : gradient_descent: iteration 3040: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 4.600662e-09, step = 0.01
+GPT :     266.003455 s : gradient_descent: iteration 3050: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 4.586486e-09, step = 0.01
+GPT :     266.521407 s : gradient_descent: iteration 3060: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 4.572388e-09, step = 0.01
+GPT :     267.037675 s : gradient_descent: iteration 3070: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 4.558367e-09, step = 0.01
+GPT :     267.554172 s : gradient_descent: iteration 3080: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 4.544423e-09, step = 0.01
+GPT :     268.070027 s : gradient_descent: iteration 3090: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 4.530555e-09, step = 0.01
+GPT :     268.588789 s : gradient_descent: iteration 3100: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 4.516762e-09, step = 0.01
+GPT :     269.104923 s : gradient_descent: iteration 3110: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 4.503044e-09, step = 0.01
+GPT :     269.622598 s : gradient_descent: iteration 3120: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 4.489401e-09, step = 0.01
+GPT :     270.139868 s : gradient_descent: iteration 3130: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 4.475831e-09, step = 0.01
+GPT :     270.659911 s : gradient_descent: iteration 3140: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 4.462333e-09, step = 0.01
+GPT :     271.176692 s : gradient_descent: iteration 3150: f(x) = -2.558938729427398e+05, |df|/sqrt(dof) = 4.448908e-09, step = 0.01
+GPT :     271.695935 s : gradient_descent: iteration 3160: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 4.435555e-09, step = 0.01
+GPT :     272.212163 s : gradient_descent: iteration 3170: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 4.422273e-09, step = 0.01
+GPT :     272.730223 s : gradient_descent: iteration 3180: f(x) = -2.558938729427386e+05, |df|/sqrt(dof) = 4.409061e-09, step = 0.01
+GPT :     273.247090 s : gradient_descent: iteration 3190: f(x) = -2.558938729427385e+05, |df|/sqrt(dof) = 4.395918e-09, step = 0.01
+GPT :     273.765994 s : gradient_descent: iteration 3200: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 4.382845e-09, step = 0.01
+GPT :     274.285115 s : gradient_descent: iteration 3210: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 4.369841e-09, step = 0.01
+GPT :     274.804497 s : gradient_descent: iteration 3220: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 4.356905e-09, step = 0.01
+GPT :     275.321064 s : gradient_descent: iteration 3230: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 4.344036e-09, step = 0.01
+GPT :     275.838515 s : gradient_descent: iteration 3240: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 4.331234e-09, step = 0.01
+GPT :     276.355452 s : gradient_descent: iteration 3250: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 4.318498e-09, step = 0.01
+GPT :     276.874161 s : gradient_descent: iteration 3260: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 4.305828e-09, step = 0.01
+GPT :     277.391440 s : gradient_descent: iteration 3270: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 4.293224e-09, step = 0.01
+GPT :     277.908621 s : gradient_descent: iteration 3280: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 4.280684e-09, step = 0.01
+GPT :     278.425689 s : gradient_descent: iteration 3290: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 4.268208e-09, step = 0.01
+GPT :     278.946163 s : gradient_descent: iteration 3300: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 4.255796e-09, step = 0.01
+GPT :     279.462986 s : gradient_descent: iteration 3310: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 4.243447e-09, step = 0.01
+GPT :     279.979661 s : gradient_descent: iteration 3320: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 4.231160e-09, step = 0.01
+GPT :     280.496460 s : gradient_descent: iteration 3330: f(x) = -2.558938729427399e+05, |df|/sqrt(dof) = 4.218935e-09, step = 0.01
+GPT :     281.015686 s : gradient_descent: iteration 3340: f(x) = -2.558938729427384e+05, |df|/sqrt(dof) = 4.206772e-09, step = 0.01
+GPT :     281.532002 s : gradient_descent: iteration 3350: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 4.194670e-09, step = 0.01
+GPT :     282.048620 s : gradient_descent: iteration 3360: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 4.182629e-09, step = 0.01
+GPT :     282.565368 s : gradient_descent: iteration 3370: f(x) = -2.558938729427386e+05, |df|/sqrt(dof) = 4.170647e-09, step = 0.01
+GPT :     283.083850 s : gradient_descent: iteration 3380: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 4.158725e-09, step = 0.01
+GPT :     283.602275 s : gradient_descent: iteration 3390: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 4.146862e-09, step = 0.01
+GPT :     284.119029 s : gradient_descent: iteration 3400: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 4.135058e-09, step = 0.01
+GPT :     284.636136 s : gradient_descent: iteration 3410: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 4.123311e-09, step = 0.01
+GPT :     285.154573 s : gradient_descent: iteration 3420: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 4.111623e-09, step = 0.01
+GPT :     285.671954 s : gradient_descent: iteration 3430: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 4.099991e-09, step = 0.01
+GPT :     286.188601 s : gradient_descent: iteration 3440: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 4.088416e-09, step = 0.01
+GPT :     286.705068 s : gradient_descent: iteration 3450: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 4.076897e-09, step = 0.01
+GPT :     287.224086 s : gradient_descent: iteration 3460: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 4.065434e-09, step = 0.01
+GPT :     287.740526 s : gradient_descent: iteration 3470: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 4.054026e-09, step = 0.01
+GPT :     288.256801 s : gradient_descent: iteration 3480: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 4.042673e-09, step = 0.01
+GPT :     288.774375 s : gradient_descent: iteration 3490: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 4.031375e-09, step = 0.01
+GPT :     289.292828 s : gradient_descent: iteration 3500: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 4.020130e-09, step = 0.01
+GPT :     289.808735 s : gradient_descent: iteration 3510: f(x) = -2.558938729427397e+05, |df|/sqrt(dof) = 4.008939e-09, step = 0.01
+GPT :     290.324755 s : gradient_descent: iteration 3520: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 3.997802e-09, step = 0.01
+GPT :     290.840655 s : gradient_descent: iteration 3530: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 3.986716e-09, step = 0.01
+GPT :     291.358264 s : gradient_descent: iteration 3540: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 3.975684e-09, step = 0.01
+GPT :     291.874478 s : gradient_descent: iteration 3550: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 3.964703e-09, step = 0.01
+GPT :     292.389724 s : gradient_descent: iteration 3560: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 3.953773e-09, step = 0.01
+GPT :     292.905499 s : gradient_descent: iteration 3570: f(x) = -2.558938729427397e+05, |df|/sqrt(dof) = 3.942894e-09, step = 0.01
+GPT :     293.424254 s : gradient_descent: iteration 3580: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 3.932066e-09, step = 0.01
+GPT :     293.942197 s : gradient_descent: iteration 3590: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 3.921289e-09, step = 0.01
+GPT :     294.459964 s : gradient_descent: iteration 3600: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 3.910561e-09, step = 0.01
+GPT :     294.976488 s : gradient_descent: iteration 3610: f(x) = -2.558938729427401e+05, |df|/sqrt(dof) = 3.899882e-09, step = 0.01
+GPT :     295.495661 s : gradient_descent: iteration 3620: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 3.889253e-09, step = 0.01
+GPT :     296.014442 s : gradient_descent: iteration 3630: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 3.878672e-09, step = 0.01
+GPT :     296.533686 s : gradient_descent: iteration 3640: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 3.868140e-09, step = 0.01
+GPT :     297.050720 s : gradient_descent: iteration 3650: f(x) = -2.558938729427397e+05, |df|/sqrt(dof) = 3.857656e-09, step = 0.01
+GPT :     297.570839 s : gradient_descent: iteration 3660: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 3.847219e-09, step = 0.01
+GPT :     298.090214 s : gradient_descent: iteration 3670: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 3.836829e-09, step = 0.01
+GPT :     298.608831 s : gradient_descent: iteration 3680: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 3.826486e-09, step = 0.01
+GPT :     299.127150 s : gradient_descent: iteration 3690: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 3.816190e-09, step = 0.01
+GPT :     299.648885 s : gradient_descent: iteration 3700: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 3.805939e-09, step = 0.01
+GPT :     300.165015 s : gradient_descent: iteration 3710: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 3.795735e-09, step = 0.01
+GPT :     300.681720 s : gradient_descent: iteration 3720: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 3.785576e-09, step = 0.01
+GPT :     301.198378 s : gradient_descent: iteration 3730: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 3.775462e-09, step = 0.01
+GPT :     301.718452 s : gradient_descent: iteration 3740: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 3.765392e-09, step = 0.01
+GPT :     302.234286 s : gradient_descent: iteration 3750: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 3.755367e-09, step = 0.01
+GPT :     302.750756 s : gradient_descent: iteration 3760: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 3.745386e-09, step = 0.01
+GPT :     303.266622 s : gradient_descent: iteration 3770: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 3.735449e-09, step = 0.01
+GPT :     303.789687 s : gradient_descent: iteration 3780: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 3.725555e-09, step = 0.01
+GPT :     304.328292 s : gradient_descent: iteration 3790: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 3.715704e-09, step = 0.01
+GPT :     304.844707 s : gradient_descent: iteration 3800: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 3.705895e-09, step = 0.01
+GPT :     305.360957 s : gradient_descent: iteration 3810: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 3.696130e-09, step = 0.01
+GPT :     305.879565 s : gradient_descent: iteration 3820: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 3.686406e-09, step = 0.01
+GPT :     306.395874 s : gradient_descent: iteration 3830: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 3.676724e-09, step = 0.01
+GPT :     306.911474 s : gradient_descent: iteration 3840: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 3.667083e-09, step = 0.01
+GPT :     307.427349 s : gradient_descent: iteration 3850: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 3.657484e-09, step = 0.01
+GPT :     307.946222 s : gradient_descent: iteration 3860: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 3.647925e-09, step = 0.01
+GPT :     308.463015 s : gradient_descent: iteration 3870: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 3.638407e-09, step = 0.01
+GPT :     308.979117 s : gradient_descent: iteration 3880: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 3.628929e-09, step = 0.01
+GPT :     309.496848 s : gradient_descent: iteration 3890: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 3.619491e-09, step = 0.01
+GPT :     310.015459 s : gradient_descent: iteration 3900: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 3.610093e-09, step = 0.01
+GPT :     310.532253 s : gradient_descent: iteration 3910: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 3.600734e-09, step = 0.01
+GPT :     311.048792 s : gradient_descent: iteration 3920: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 3.591414e-09, step = 0.01
+GPT :     311.566146 s : gradient_descent: iteration 3930: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 3.582133e-09, step = 0.01
+GPT :     312.084011 s : gradient_descent: iteration 3940: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 3.572890e-09, step = 0.01
+GPT :     312.600729 s : gradient_descent: iteration 3950: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 3.563686e-09, step = 0.01
+GPT :     313.115973 s : gradient_descent: iteration 3960: f(x) = -2.558938729427397e+05, |df|/sqrt(dof) = 3.554519e-09, step = 0.01
+GPT :     313.632099 s : gradient_descent: iteration 3970: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 3.545390e-09, step = 0.01
+GPT :     314.149755 s : gradient_descent: iteration 3980: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 3.536299e-09, step = 0.01
+GPT :     314.668277 s : gradient_descent: iteration 3990: f(x) = -2.558938729427397e+05, |df|/sqrt(dof) = 3.527244e-09, step = 0.01
+GPT :     315.185508 s : gradient_descent: iteration 4000: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 3.518227e-09, step = 0.01
+GPT :     315.703660 s : gradient_descent: iteration 4010: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 3.509246e-09, step = 0.01
+GPT :     316.224038 s : gradient_descent: iteration 4020: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 3.500301e-09, step = 0.01
+GPT :     316.741498 s : gradient_descent: iteration 4030: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 3.491393e-09, step = 0.01
+GPT :     317.258247 s : gradient_descent: iteration 4040: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 3.482520e-09, step = 0.01
+GPT :     317.774912 s : gradient_descent: iteration 4050: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 3.473683e-09, step = 0.01
+GPT :     318.291438 s : gradient_descent: iteration 4060: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 3.464881e-09, step = 0.01
+GPT :     318.808848 s : gradient_descent: iteration 4070: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 3.456114e-09, step = 0.01
+GPT :     319.326432 s : gradient_descent: iteration 4080: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 3.447382e-09, step = 0.01
+GPT :     319.845697 s : gradient_descent: iteration 4090: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 3.438685e-09, step = 0.01
+GPT :     320.363106 s : gradient_descent: iteration 4100: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 3.430021e-09, step = 0.01
+GPT :     320.878644 s : gradient_descent: iteration 4110: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 3.421392e-09, step = 0.01
+GPT :     321.394123 s : gradient_descent: iteration 4120: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 3.412797e-09, step = 0.01
+GPT :     321.910518 s : gradient_descent: iteration 4130: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 3.404235e-09, step = 0.01
+GPT :     322.427232 s : gradient_descent: iteration 4140: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 3.395707e-09, step = 0.01
+GPT :     322.941622 s : gradient_descent: iteration 4150: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 3.387212e-09, step = 0.01
+GPT :     323.456619 s : gradient_descent: iteration 4160: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 3.378749e-09, step = 0.01
+GPT :     323.973198 s : gradient_descent: iteration 4170: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 3.370320e-09, step = 0.01
+GPT :     324.490365 s : gradient_descent: iteration 4180: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 3.361923e-09, step = 0.01
+GPT :     325.004477 s : gradient_descent: iteration 4190: f(x) = -2.558938729427397e+05, |df|/sqrt(dof) = 3.353558e-09, step = 0.01
+GPT :     325.520413 s : gradient_descent: iteration 4200: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 3.345225e-09, step = 0.01
+GPT :     326.036699 s : gradient_descent: iteration 4210: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 3.336923e-09, step = 0.01
+GPT :     326.552773 s : gradient_descent: iteration 4220: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 3.328654e-09, step = 0.01
+GPT :     327.066581 s : gradient_descent: iteration 4230: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 3.320416e-09, step = 0.01
+GPT :     327.581513 s : gradient_descent: iteration 4240: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 3.312209e-09, step = 0.01
+GPT :     328.097968 s : gradient_descent: iteration 4250: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 3.304032e-09, step = 0.01
+GPT :     328.614659 s : gradient_descent: iteration 4260: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 3.295887e-09, step = 0.01
+GPT :     329.128845 s : gradient_descent: iteration 4270: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 3.287772e-09, step = 0.01
+GPT :     329.644480 s : gradient_descent: iteration 4280: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 3.279687e-09, step = 0.01
+GPT :     330.161333 s : gradient_descent: iteration 4290: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 3.271633e-09, step = 0.01
+GPT :     330.678704 s : gradient_descent: iteration 4300: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 3.263608e-09, step = 0.01
+GPT :     331.198555 s : gradient_descent: iteration 4310: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 3.255613e-09, step = 0.01
+GPT :     331.715352 s : gradient_descent: iteration 4320: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 3.247648e-09, step = 0.01
+GPT :     332.232780 s : gradient_descent: iteration 4330: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 3.239712e-09, step = 0.01
+GPT :     332.749571 s : gradient_descent: iteration 4340: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 3.231805e-09, step = 0.01
+GPT :     333.264191 s : gradient_descent: iteration 4350: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 3.223927e-09, step = 0.01
+GPT :     333.779587 s : gradient_descent: iteration 4360: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 3.216078e-09, step = 0.01
+GPT :     334.296917 s : gradient_descent: iteration 4370: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 3.208257e-09, step = 0.01
+GPT :     334.820801 s : gradient_descent: iteration 4380: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 3.200465e-09, step = 0.01
+GPT :     335.335524 s : gradient_descent: iteration 4390: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 3.192701e-09, step = 0.01
+GPT :     335.851214 s : gradient_descent: iteration 4400: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 3.184964e-09, step = 0.01
+GPT :     336.368411 s : gradient_descent: iteration 4410: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 3.177256e-09, step = 0.01
+GPT :     336.883521 s : gradient_descent: iteration 4420: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 3.169575e-09, step = 0.01
+GPT :     337.398186 s : gradient_descent: iteration 4430: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 3.161922e-09, step = 0.01
+GPT :     337.918473 s : gradient_descent: iteration 4440: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 3.154296e-09, step = 0.01
+GPT :     338.438486 s : gradient_descent: iteration 4450: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 3.146697e-09, step = 0.01
+GPT :     338.954297 s : gradient_descent: iteration 4460: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 3.139125e-09, step = 0.01
+GPT :     339.471695 s : gradient_descent: iteration 4470: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 3.131580e-09, step = 0.01
+GPT :     339.994402 s : gradient_descent: iteration 4480: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 3.124061e-09, step = 0.01
+GPT :     340.512310 s : gradient_descent: iteration 4490: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 3.116569e-09, step = 0.01
+GPT :     341.028654 s : gradient_descent: iteration 4500: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 3.109103e-09, step = 0.01
+GPT :     341.545820 s : gradient_descent: iteration 4510: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 3.101663e-09, step = 0.01
+GPT :     342.067972 s : gradient_descent: iteration 4520: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 3.094250e-09, step = 0.01
+GPT :     342.588897 s : gradient_descent: iteration 4530: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 3.086861e-09, step = 0.01
+GPT :     343.106109 s : gradient_descent: iteration 4540: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 3.079499e-09, step = 0.01
+GPT :     343.624919 s : gradient_descent: iteration 4550: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 3.072162e-09, step = 0.01
+GPT :     344.142375 s : gradient_descent: iteration 4560: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 3.064850e-09, step = 0.01
+GPT :     344.662612 s : gradient_descent: iteration 4570: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 3.057563e-09, step = 0.01
+GPT :     345.181600 s : gradient_descent: iteration 4580: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 3.050302e-09, step = 0.01
+GPT :     345.699025 s : gradient_descent: iteration 4590: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 3.043065e-09, step = 0.01
+GPT :     346.216988 s : gradient_descent: iteration 4600: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 3.035852e-09, step = 0.01
+GPT :     346.737048 s : gradient_descent: iteration 4610: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 3.028665e-09, step = 0.01
+GPT :     347.253825 s : gradient_descent: iteration 4620: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 3.021501e-09, step = 0.01
+GPT :     347.771031 s : gradient_descent: iteration 4630: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 3.014362e-09, step = 0.01
+GPT :     348.289382 s : gradient_descent: iteration 4640: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 3.007247e-09, step = 0.01
+GPT :     348.809319 s : gradient_descent: iteration 4650: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 3.000156e-09, step = 0.01
+GPT :     349.326366 s : gradient_descent: iteration 4660: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.993088e-09, step = 0.01
+GPT :     349.847217 s : gradient_descent: iteration 4670: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 2.986045e-09, step = 0.01
+GPT :     350.364249 s : gradient_descent: iteration 4680: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.979024e-09, step = 0.01
+GPT :     350.898981 s : gradient_descent: iteration 4690: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 2.972027e-09, step = 0.01
+GPT :     351.417033 s : gradient_descent: iteration 4700: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 2.965054e-09, step = 0.01
+GPT :     351.935105 s : gradient_descent: iteration 4710: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 2.958103e-09, step = 0.01
+GPT :     352.454140 s : gradient_descent: iteration 4720: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 2.951175e-09, step = 0.01
+GPT :     352.973818 s : gradient_descent: iteration 4730: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 2.944270e-09, step = 0.01
+GPT :     353.492383 s : gradient_descent: iteration 4740: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 2.937388e-09, step = 0.01
+GPT :     354.010450 s : gradient_descent: iteration 4750: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 2.930528e-09, step = 0.01
+GPT :     354.529453 s : gradient_descent: iteration 4760: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.923691e-09, step = 0.01
+GPT :     355.050447 s : gradient_descent: iteration 4770: f(x) = -2.558938729427386e+05, |df|/sqrt(dof) = 2.916876e-09, step = 0.01
+GPT :     355.568418 s : gradient_descent: iteration 4780: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 2.910083e-09, step = 0.01
+GPT :     356.085688 s : gradient_descent: iteration 4790: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 2.903312e-09, step = 0.01
+GPT :     356.604735 s : gradient_descent: iteration 4800: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 2.896563e-09, step = 0.01
+GPT :     357.124394 s : gradient_descent: iteration 4810: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 2.889836e-09, step = 0.01
+GPT :     357.642364 s : gradient_descent: iteration 4820: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 2.883130e-09, step = 0.01
+GPT :     358.160630 s : gradient_descent: iteration 4830: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.876446e-09, step = 0.01
+GPT :     358.678924 s : gradient_descent: iteration 4840: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 2.869783e-09, step = 0.01
+GPT :     359.198339 s : gradient_descent: iteration 4850: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 2.863142e-09, step = 0.01
+GPT :     359.715750 s : gradient_descent: iteration 4860: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 2.856521e-09, step = 0.01
+GPT :     360.233874 s : gradient_descent: iteration 4870: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 2.849922e-09, step = 0.01
+GPT :     360.754375 s : gradient_descent: iteration 4880: f(x) = -2.558938729427386e+05, |df|/sqrt(dof) = 2.843343e-09, step = 0.01
+GPT :     361.276695 s : gradient_descent: iteration 4890: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 2.836786e-09, step = 0.01
+GPT :     361.794613 s : gradient_descent: iteration 4900: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.830249e-09, step = 0.01
+GPT :     362.312664 s : gradient_descent: iteration 4910: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 2.823732e-09, step = 0.01
+GPT :     362.830696 s : gradient_descent: iteration 4920: f(x) = -2.558938729427386e+05, |df|/sqrt(dof) = 2.817236e-09, step = 0.01
+GPT :     363.349833 s : gradient_descent: iteration 4930: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 2.810760e-09, step = 0.01
+GPT :     363.867831 s : gradient_descent: iteration 4940: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 2.804305e-09, step = 0.01
+GPT :     364.385516 s : gradient_descent: iteration 4950: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 2.797869e-09, step = 0.01
+GPT :     364.920095 s : gradient_descent: iteration 4960: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 2.791454e-09, step = 0.01
+GPT :     365.443662 s : gradient_descent: iteration 4970: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.785058e-09, step = 0.01
+GPT :     365.962907 s : gradient_descent: iteration 4980: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.778682e-09, step = 0.01
+GPT :     366.480785 s : gradient_descent: iteration 4990: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 2.772326e-09, step = 0.01
+GPT :     366.999812 s : gradient_descent: iteration 5000: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.765989e-09, step = 0.01
+GPT :     367.521679 s : gradient_descent: iteration 5010: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 2.759672e-09, step = 0.01
+GPT :     368.041473 s : gradient_descent: iteration 5020: f(x) = -2.558938729427386e+05, |df|/sqrt(dof) = 2.753374e-09, step = 0.01
+GPT :     368.560803 s : gradient_descent: iteration 5030: f(x) = -2.558938729427386e+05, |df|/sqrt(dof) = 2.747095e-09, step = 0.01
+GPT :     369.079159 s : gradient_descent: iteration 5040: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 2.740836e-09, step = 0.01
+GPT :     369.600323 s : gradient_descent: iteration 5050: f(x) = -2.558938729427383e+05, |df|/sqrt(dof) = 2.734595e-09, step = 0.01
+GPT :     370.119129 s : gradient_descent: iteration 5060: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 2.728374e-09, step = 0.01
+GPT :     370.637170 s : gradient_descent: iteration 5070: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.722171e-09, step = 0.01
+GPT :     371.154765 s : gradient_descent: iteration 5080: f(x) = -2.558938729427386e+05, |df|/sqrt(dof) = 2.715987e-09, step = 0.01
+GPT :     371.676174 s : gradient_descent: iteration 5090: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 2.709821e-09, step = 0.01
+GPT :     372.194963 s : gradient_descent: iteration 5100: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 2.703674e-09, step = 0.01
+GPT :     372.713037 s : gradient_descent: iteration 5110: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 2.697546e-09, step = 0.01
+GPT :     373.231460 s : gradient_descent: iteration 5120: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.691436e-09, step = 0.01
+GPT :     373.751971 s : gradient_descent: iteration 5130: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 2.685344e-09, step = 0.01
+GPT :     374.271481 s : gradient_descent: iteration 5140: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 2.679270e-09, step = 0.01
+GPT :     374.789359 s : gradient_descent: iteration 5150: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.673214e-09, step = 0.01
+GPT :     375.309035 s : gradient_descent: iteration 5160: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 2.667176e-09, step = 0.01
+GPT :     375.828480 s : gradient_descent: iteration 5170: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.661156e-09, step = 0.01
+GPT :     376.347125 s : gradient_descent: iteration 5180: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.655154e-09, step = 0.01
+GPT :     376.866552 s : gradient_descent: iteration 5190: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 2.649169e-09, step = 0.01
+GPT :     377.387621 s : gradient_descent: iteration 5200: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 2.643202e-09, step = 0.01
+GPT :     377.909258 s : gradient_descent: iteration 5210: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.637253e-09, step = 0.01
+GPT :     378.431706 s : gradient_descent: iteration 5220: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 2.631321e-09, step = 0.01
+GPT :     378.952380 s : gradient_descent: iteration 5230: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 2.625406e-09, step = 0.01
+GPT :     379.471570 s : gradient_descent: iteration 5240: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.619508e-09, step = 0.01
+GPT :     379.992598 s : gradient_descent: iteration 5250: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.613628e-09, step = 0.01
+GPT :     380.511161 s : gradient_descent: iteration 5260: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 2.607764e-09, step = 0.01
+GPT :     381.029799 s : gradient_descent: iteration 5270: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 2.601918e-09, step = 0.01
+GPT :     381.549271 s : gradient_descent: iteration 5280: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.596088e-09, step = 0.01
+GPT :     382.068703 s : gradient_descent: iteration 5290: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.590275e-09, step = 0.01
+GPT :     382.586243 s : gradient_descent: iteration 5300: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 2.584479e-09, step = 0.01
+GPT :     383.104706 s : gradient_descent: iteration 5310: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 2.578700e-09, step = 0.01
+GPT :     383.626192 s : gradient_descent: iteration 5320: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 2.572937e-09, step = 0.01
+GPT :     384.147695 s : gradient_descent: iteration 5330: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 2.567190e-09, step = 0.01
+GPT :     384.665707 s : gradient_descent: iteration 5340: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 2.561460e-09, step = 0.01
+GPT :     385.183426 s : gradient_descent: iteration 5350: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 2.555746e-09, step = 0.01
+GPT :     385.703130 s : gradient_descent: iteration 5360: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 2.550049e-09, step = 0.01
+GPT :     386.222664 s : gradient_descent: iteration 5370: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 2.544367e-09, step = 0.01
+GPT :     386.740715 s : gradient_descent: iteration 5380: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 2.538702e-09, step = 0.01
+GPT :     387.258878 s : gradient_descent: iteration 5390: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 2.533053e-09, step = 0.01
+GPT :     387.779315 s : gradient_descent: iteration 5400: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 2.527419e-09, step = 0.01
+GPT :     388.297907 s : gradient_descent: iteration 5410: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 2.521801e-09, step = 0.01
+GPT :     388.816316 s : gradient_descent: iteration 5420: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 2.516200e-09, step = 0.01
+GPT :     389.334837 s : gradient_descent: iteration 5430: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.510613e-09, step = 0.01
+GPT :     389.854992 s : gradient_descent: iteration 5440: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 2.505043e-09, step = 0.01
+GPT :     390.373791 s : gradient_descent: iteration 5450: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 2.499488e-09, step = 0.01
+GPT :     390.892232 s : gradient_descent: iteration 5460: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 2.493948e-09, step = 0.01
+GPT :     391.410512 s : gradient_descent: iteration 5470: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 2.488424e-09, step = 0.01
+GPT :     391.931594 s : gradient_descent: iteration 5480: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 2.482915e-09, step = 0.01
+GPT :     392.451485 s : gradient_descent: iteration 5490: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.477421e-09, step = 0.01
+GPT :     392.969182 s : gradient_descent: iteration 5500: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 2.471943e-09, step = 0.01
+GPT :     393.489217 s : gradient_descent: iteration 5510: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.466479e-09, step = 0.01
+GPT :     394.010089 s : gradient_descent: iteration 5520: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.461031e-09, step = 0.01
+GPT :     394.529805 s : gradient_descent: iteration 5530: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 2.455597e-09, step = 0.01
+GPT :     395.048326 s : gradient_descent: iteration 5540: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 2.450179e-09, step = 0.01
+GPT :     395.566864 s : gradient_descent: iteration 5550: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.444775e-09, step = 0.01
+GPT :     396.088572 s : gradient_descent: iteration 5560: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.439386e-09, step = 0.01
+GPT :     396.606020 s : gradient_descent: iteration 5570: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.434012e-09, step = 0.01
+GPT :     397.124537 s : gradient_descent: iteration 5580: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 2.428652e-09, step = 0.01
+GPT :     397.642678 s : gradient_descent: iteration 5590: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.423307e-09, step = 0.01
+GPT :     398.163338 s : gradient_descent: iteration 5600: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 2.417976e-09, step = 0.01
+GPT :     398.682179 s : gradient_descent: iteration 5610: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 2.412660e-09, step = 0.01
+GPT :     399.200437 s : gradient_descent: iteration 5620: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 2.407358e-09, step = 0.01
+GPT :     399.717905 s : gradient_descent: iteration 5630: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.402071e-09, step = 0.01
+GPT :     400.239173 s : gradient_descent: iteration 5640: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 2.396797e-09, step = 0.01
+GPT :     400.759973 s : gradient_descent: iteration 5650: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 2.391538e-09, step = 0.01
+GPT :     401.278597 s : gradient_descent: iteration 5660: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.386293e-09, step = 0.01
+GPT :     401.797354 s : gradient_descent: iteration 5670: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.381062e-09, step = 0.01
+GPT :     402.318281 s : gradient_descent: iteration 5680: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 2.375845e-09, step = 0.01
+GPT :     402.836185 s : gradient_descent: iteration 5690: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 2.370642e-09, step = 0.01
+GPT :     403.354485 s : gradient_descent: iteration 5700: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 2.365452e-09, step = 0.01
+GPT :     403.873825 s : gradient_descent: iteration 5710: f(x) = -2.558938729427386e+05, |df|/sqrt(dof) = 2.360277e-09, step = 0.01
+GPT :     404.393251 s : gradient_descent: iteration 5720: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 2.355115e-09, step = 0.01
+GPT :     404.912500 s : gradient_descent: iteration 5730: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.349967e-09, step = 0.01
+GPT :     405.432559 s : gradient_descent: iteration 5740: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.344832e-09, step = 0.01
+GPT :     405.953970 s : gradient_descent: iteration 5750: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.339712e-09, step = 0.01
+GPT :     406.475821 s : gradient_descent: iteration 5760: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 2.334604e-09, step = 0.01
+GPT :     406.995428 s : gradient_descent: iteration 5770: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.329510e-09, step = 0.01
+GPT :     407.516208 s : gradient_descent: iteration 5780: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.324430e-09, step = 0.01
+GPT :     408.033752 s : gradient_descent: iteration 5790: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 2.319362e-09, step = 0.01
+GPT :     408.556193 s : gradient_descent: iteration 5800: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 2.314308e-09, step = 0.01
+GPT :     409.074214 s : gradient_descent: iteration 5810: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.309267e-09, step = 0.01
+GPT :     409.592090 s : gradient_descent: iteration 5820: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.304240e-09, step = 0.01
+GPT :     410.109437 s : gradient_descent: iteration 5830: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 2.299225e-09, step = 0.01
+GPT :     410.628983 s : gradient_descent: iteration 5840: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 2.294224e-09, step = 0.01
+GPT :     411.146380 s : gradient_descent: iteration 5850: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 2.289235e-09, step = 0.01
+GPT :     411.663486 s : gradient_descent: iteration 5860: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.284260e-09, step = 0.01
+GPT :     412.181983 s : gradient_descent: iteration 5870: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 2.279297e-09, step = 0.01
+GPT :     412.700495 s : gradient_descent: iteration 5880: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.274347e-09, step = 0.01
+GPT :     413.218197 s : gradient_descent: iteration 5890: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.269410e-09, step = 0.01
+GPT :     413.735483 s : gradient_descent: iteration 5900: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 2.264485e-09, step = 0.01
+GPT :     414.253547 s : gradient_descent: iteration 5910: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 2.259574e-09, step = 0.01
+GPT :     414.773070 s : gradient_descent: iteration 5920: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 2.254675e-09, step = 0.01
+GPT :     415.290547 s : gradient_descent: iteration 5930: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 2.249788e-09, step = 0.01
+GPT :     415.808366 s : gradient_descent: iteration 5940: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 2.244914e-09, step = 0.01
+GPT :     416.327363 s : gradient_descent: iteration 5950: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 2.240053e-09, step = 0.01
+GPT :     416.846928 s : gradient_descent: iteration 5960: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 2.235204e-09, step = 0.01
+GPT :     417.365421 s : gradient_descent: iteration 5970: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.230367e-09, step = 0.01
+GPT :     417.883070 s : gradient_descent: iteration 5980: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 2.225542e-09, step = 0.01
+GPT :     418.401576 s : gradient_descent: iteration 5990: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 2.220730e-09, step = 0.01
+GPT :     418.936879 s : gradient_descent: iteration 6000: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.215930e-09, step = 0.01
+GPT :     419.455390 s : gradient_descent: iteration 6010: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.211142e-09, step = 0.01
+GPT :     419.974067 s : gradient_descent: iteration 6020: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 2.206367e-09, step = 0.01
+GPT :     420.493575 s : gradient_descent: iteration 6030: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 2.201603e-09, step = 0.01
+GPT :     421.015819 s : gradient_descent: iteration 6040: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.196852e-09, step = 0.01
+GPT :     421.535307 s : gradient_descent: iteration 6050: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 2.192112e-09, step = 0.01
+GPT :     422.053955 s : gradient_descent: iteration 6060: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.187384e-09, step = 0.01
+GPT :     422.573989 s : gradient_descent: iteration 6070: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 2.182668e-09, step = 0.01
+GPT :     423.094939 s : gradient_descent: iteration 6080: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 2.177965e-09, step = 0.01
+GPT :     423.614392 s : gradient_descent: iteration 6090: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 2.173272e-09, step = 0.01
+GPT :     424.133665 s : gradient_descent: iteration 6100: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.168592e-09, step = 0.01
+GPT :     424.651947 s : gradient_descent: iteration 6110: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 2.163923e-09, step = 0.01
+GPT :     425.175523 s : gradient_descent: iteration 6120: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 2.159266e-09, step = 0.01
+GPT :     425.706964 s : gradient_descent: iteration 6130: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 2.154621e-09, step = 0.01
+GPT :     426.228448 s : gradient_descent: iteration 6140: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.149987e-09, step = 0.01
+GPT :     426.750085 s : gradient_descent: iteration 6150: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.145364e-09, step = 0.01
+GPT :     427.272547 s : gradient_descent: iteration 6160: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 2.140754e-09, step = 0.01
+GPT :     427.793575 s : gradient_descent: iteration 6170: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.136154e-09, step = 0.01
+GPT :     428.314820 s : gradient_descent: iteration 6180: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 2.131566e-09, step = 0.01
+GPT :     428.835815 s : gradient_descent: iteration 6190: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.126989e-09, step = 0.01
+GPT :     429.358984 s : gradient_descent: iteration 6200: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 2.122424e-09, step = 0.01
+GPT :     429.880289 s : gradient_descent: iteration 6210: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 2.117870e-09, step = 0.01
+GPT :     430.402328 s : gradient_descent: iteration 6220: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 2.113327e-09, step = 0.01
+GPT :     430.924070 s : gradient_descent: iteration 6230: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.108795e-09, step = 0.01
+GPT :     431.447196 s : gradient_descent: iteration 6240: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 2.104275e-09, step = 0.01
+GPT :     431.968185 s : gradient_descent: iteration 6250: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 2.099765e-09, step = 0.01
+GPT :     432.489306 s : gradient_descent: iteration 6260: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 2.095267e-09, step = 0.01
+GPT :     433.012469 s : gradient_descent: iteration 6270: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.090779e-09, step = 0.01
+GPT :     433.534117 s : gradient_descent: iteration 6280: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.086303e-09, step = 0.01
+GPT :     434.054883 s : gradient_descent: iteration 6290: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 2.081837e-09, step = 0.01
+GPT :     434.577686 s : gradient_descent: iteration 6300: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 2.077382e-09, step = 0.01
+GPT :     435.099281 s : gradient_descent: iteration 6310: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.072939e-09, step = 0.01
+GPT :     435.621402 s : gradient_descent: iteration 6320: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.068506e-09, step = 0.01
+GPT :     436.142301 s : gradient_descent: iteration 6330: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.064083e-09, step = 0.01
+GPT :     436.663502 s : gradient_descent: iteration 6340: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.059672e-09, step = 0.01
+GPT :     437.184254 s : gradient_descent: iteration 6350: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 2.055271e-09, step = 0.01
+GPT :     437.703972 s : gradient_descent: iteration 6360: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 2.050881e-09, step = 0.01
+GPT :     438.224267 s : gradient_descent: iteration 6370: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 2.046501e-09, step = 0.01
+GPT :     438.743886 s : gradient_descent: iteration 6380: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.042133e-09, step = 0.01
+GPT :     439.265450 s : gradient_descent: iteration 6390: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.037774e-09, step = 0.01
+GPT :     439.785583 s : gradient_descent: iteration 6400: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 2.033426e-09, step = 0.01
+GPT :     440.304491 s : gradient_descent: iteration 6410: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 2.029089e-09, step = 0.01
+GPT :     440.824718 s : gradient_descent: iteration 6420: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 2.024762e-09, step = 0.01
+GPT :     441.346745 s : gradient_descent: iteration 6430: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 2.020445e-09, step = 0.01
+GPT :     441.866167 s : gradient_descent: iteration 6440: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.016139e-09, step = 0.01
+GPT :     442.386657 s : gradient_descent: iteration 6450: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 2.011843e-09, step = 0.01
+GPT :     442.905823 s : gradient_descent: iteration 6460: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 2.007558e-09, step = 0.01
+GPT :     443.427826 s : gradient_descent: iteration 6470: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 2.003282e-09, step = 0.01
+GPT :     443.947904 s : gradient_descent: iteration 6480: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.999017e-09, step = 0.01
+GPT :     444.468253 s : gradient_descent: iteration 6490: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.994762e-09, step = 0.01
+GPT :     444.987635 s : gradient_descent: iteration 6500: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.990517e-09, step = 0.01
+GPT :     445.509352 s : gradient_descent: iteration 6510: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.986283e-09, step = 0.01
+GPT :     446.030938 s : gradient_descent: iteration 6520: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.982058e-09, step = 0.01
+GPT :     446.551520 s : gradient_descent: iteration 6530: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.977844e-09, step = 0.01
+GPT :     447.070615 s : gradient_descent: iteration 6540: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.973639e-09, step = 0.01
+GPT :     447.593717 s : gradient_descent: iteration 6550: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.969444e-09, step = 0.01
+GPT :     448.112373 s : gradient_descent: iteration 6560: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.965260e-09, step = 0.01
+GPT :     448.633529 s : gradient_descent: iteration 6570: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.961085e-09, step = 0.01
+GPT :     449.153006 s : gradient_descent: iteration 6580: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.956920e-09, step = 0.01
+GPT :     449.674529 s : gradient_descent: iteration 6590: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 1.952765e-09, step = 0.01
+GPT :     450.193453 s : gradient_descent: iteration 6600: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.948620e-09, step = 0.01
+GPT :     450.713552 s : gradient_descent: iteration 6610: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.944484e-09, step = 0.01
+GPT :     451.231993 s : gradient_descent: iteration 6620: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.940359e-09, step = 0.01
+GPT :     451.753889 s : gradient_descent: iteration 6630: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.936243e-09, step = 0.01
+GPT :     452.273455 s : gradient_descent: iteration 6640: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.932136e-09, step = 0.01
+GPT :     452.792481 s : gradient_descent: iteration 6650: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.928039e-09, step = 0.01
+GPT :     453.311564 s : gradient_descent: iteration 6660: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.923952e-09, step = 0.01
+GPT :     453.833578 s : gradient_descent: iteration 6670: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.919875e-09, step = 0.01
+GPT :     454.353302 s : gradient_descent: iteration 6680: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.915807e-09, step = 0.01
+GPT :     454.872217 s : gradient_descent: iteration 6690: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 1.911748e-09, step = 0.01
+GPT :     455.390861 s : gradient_descent: iteration 6700: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.907699e-09, step = 0.01
+GPT :     455.912444 s : gradient_descent: iteration 6710: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.903660e-09, step = 0.01
+GPT :     456.432419 s : gradient_descent: iteration 6720: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.899630e-09, step = 0.01
+GPT :     456.953267 s : gradient_descent: iteration 6730: f(x) = -2.558938729427397e+05, |df|/sqrt(dof) = 1.895609e-09, step = 0.01
+GPT :     457.472936 s : gradient_descent: iteration 6740: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.891598e-09, step = 0.01
+GPT :     457.996178 s : gradient_descent: iteration 6750: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.887596e-09, step = 0.01
+GPT :     458.516717 s : gradient_descent: iteration 6760: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 1.883603e-09, step = 0.01
+GPT :     459.036469 s : gradient_descent: iteration 6770: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.879620e-09, step = 0.01
+GPT :     459.556865 s : gradient_descent: iteration 6780: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.875646e-09, step = 0.01
+GPT :     460.077556 s : gradient_descent: iteration 6790: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.871681e-09, step = 0.01
+GPT :     460.598768 s : gradient_descent: iteration 6800: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 1.867725e-09, step = 0.01
+GPT :     461.118772 s : gradient_descent: iteration 6810: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.863778e-09, step = 0.01
+GPT :     461.640030 s : gradient_descent: iteration 6820: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 1.859841e-09, step = 0.01
+GPT :     462.161405 s : gradient_descent: iteration 6830: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 1.855912e-09, step = 0.01
+GPT :     462.682140 s : gradient_descent: iteration 6840: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.851993e-09, step = 0.01
+GPT :     463.201399 s : gradient_descent: iteration 6850: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.848083e-09, step = 0.01
+GPT :     463.722249 s : gradient_descent: iteration 6860: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 1.844181e-09, step = 0.01
+GPT :     464.244272 s : gradient_descent: iteration 6870: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.840289e-09, step = 0.01
+GPT :     464.765252 s : gradient_descent: iteration 6880: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.836406e-09, step = 0.01
+GPT :     465.285468 s : gradient_descent: iteration 6890: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.832531e-09, step = 0.01
+GPT :     465.806190 s : gradient_descent: iteration 6900: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.828666e-09, step = 0.01
+GPT :     466.328264 s : gradient_descent: iteration 6910: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.824809e-09, step = 0.01
+GPT :     466.848280 s : gradient_descent: iteration 6920: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.820961e-09, step = 0.01
+GPT :     467.368041 s : gradient_descent: iteration 6930: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 1.817122e-09, step = 0.01
+GPT :     467.887460 s : gradient_descent: iteration 6940: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.813292e-09, step = 0.01
+GPT :     468.412550 s : gradient_descent: iteration 6950: f(x) = -2.558938729427398e+05, |df|/sqrt(dof) = 1.809470e-09, step = 0.01
+GPT :     468.933192 s : gradient_descent: iteration 6960: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.805658e-09, step = 0.01
+GPT :     469.452560 s : gradient_descent: iteration 6970: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.801854e-09, step = 0.01
+GPT :     469.973984 s : gradient_descent: iteration 6980: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.798058e-09, step = 0.01
+GPT :     470.496990 s : gradient_descent: iteration 6990: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.794272e-09, step = 0.01
+GPT :     471.018022 s : gradient_descent: iteration 7000: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 1.790494e-09, step = 0.01
+GPT :     471.540603 s : gradient_descent: iteration 7010: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.786724e-09, step = 0.01
+GPT :     472.063107 s : gradient_descent: iteration 7020: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.782963e-09, step = 0.01
+GPT :     472.586242 s : gradient_descent: iteration 7030: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 1.779211e-09, step = 0.01
+GPT :     473.107596 s : gradient_descent: iteration 7040: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 1.775467e-09, step = 0.01
+GPT :     473.629519 s : gradient_descent: iteration 7050: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.771732e-09, step = 0.01
+GPT :     474.151604 s : gradient_descent: iteration 7060: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.768005e-09, step = 0.01
+GPT :     474.673239 s : gradient_descent: iteration 7070: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.764287e-09, step = 0.01
+GPT :     475.194083 s : gradient_descent: iteration 7080: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 1.760577e-09, step = 0.01
+GPT :     475.715225 s : gradient_descent: iteration 7090: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.756875e-09, step = 0.01
+GPT :     476.255209 s : gradient_descent: iteration 7100: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.753182e-09, step = 0.01
+GPT :     476.777913 s : gradient_descent: iteration 7110: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.749497e-09, step = 0.01
+GPT :     477.298395 s : gradient_descent: iteration 7120: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 1.745821e-09, step = 0.01
+GPT :     477.819103 s : gradient_descent: iteration 7130: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.742152e-09, step = 0.01
+GPT :     478.342641 s : gradient_descent: iteration 7140: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.738493e-09, step = 0.01
+GPT :     478.863979 s : gradient_descent: iteration 7150: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.734841e-09, step = 0.01
+GPT :     479.383923 s : gradient_descent: iteration 7160: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.731197e-09, step = 0.01
+GPT :     479.904995 s : gradient_descent: iteration 7170: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.727562e-09, step = 0.01
+GPT :     480.427775 s : gradient_descent: iteration 7180: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.723935e-09, step = 0.01
+GPT :     480.948491 s : gradient_descent: iteration 7190: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.720316e-09, step = 0.01
+GPT :     481.469059 s : gradient_descent: iteration 7200: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.716705e-09, step = 0.01
+GPT :     481.990021 s : gradient_descent: iteration 7210: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.713103e-09, step = 0.01
+GPT :     482.513253 s : gradient_descent: iteration 7220: f(x) = -2.558938729427397e+05, |df|/sqrt(dof) = 1.709508e-09, step = 0.01
+GPT :     483.034069 s : gradient_descent: iteration 7230: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.705921e-09, step = 0.01
+GPT :     483.555669 s : gradient_descent: iteration 7240: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.702343e-09, step = 0.01
+GPT :     484.076128 s : gradient_descent: iteration 7250: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.698772e-09, step = 0.01
+GPT :     484.599190 s : gradient_descent: iteration 7260: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.695210e-09, step = 0.01
+GPT :     485.119070 s : gradient_descent: iteration 7270: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.691655e-09, step = 0.01
+GPT :     485.644885 s : gradient_descent: iteration 7280: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.688109e-09, step = 0.01
+GPT :     486.177429 s : gradient_descent: iteration 7290: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.684570e-09, step = 0.01
+GPT :     486.700722 s : gradient_descent: iteration 7300: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.681039e-09, step = 0.01
+GPT :     487.222468 s : gradient_descent: iteration 7310: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.677516e-09, step = 0.01
+GPT :     487.743984 s : gradient_descent: iteration 7320: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.674001e-09, step = 0.01
+GPT :     488.266058 s : gradient_descent: iteration 7330: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.670494e-09, step = 0.01
+GPT :     488.789806 s : gradient_descent: iteration 7340: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.666995e-09, step = 0.01
+GPT :     489.311147 s : gradient_descent: iteration 7350: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.663503e-09, step = 0.01
+GPT :     489.832394 s : gradient_descent: iteration 7360: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.660019e-09, step = 0.01
+GPT :     490.354092 s : gradient_descent: iteration 7370: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.656543e-09, step = 0.01
+GPT :     490.877480 s : gradient_descent: iteration 7380: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.653075e-09, step = 0.01
+GPT :     491.399618 s : gradient_descent: iteration 7390: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.649614e-09, step = 0.01
+GPT :     491.919010 s : gradient_descent: iteration 7400: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.646161e-09, step = 0.01
+GPT :     492.437969 s : gradient_descent: iteration 7410: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.642716e-09, step = 0.01
+GPT :     492.961935 s : gradient_descent: iteration 7420: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 1.639278e-09, step = 0.01
+GPT :     493.481084 s : gradient_descent: iteration 7430: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.635848e-09, step = 0.01
+GPT :     493.999572 s : gradient_descent: iteration 7440: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.632426e-09, step = 0.01
+GPT :     494.520067 s : gradient_descent: iteration 7450: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.629011e-09, step = 0.01
+GPT :     495.041857 s : gradient_descent: iteration 7460: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.625603e-09, step = 0.01
+GPT :     495.560632 s : gradient_descent: iteration 7470: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.622203e-09, step = 0.01
+GPT :     496.080477 s : gradient_descent: iteration 7480: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 1.618811e-09, step = 0.01
+GPT :     496.601255 s : gradient_descent: iteration 7490: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.615426e-09, step = 0.01
+GPT :     497.124068 s : gradient_descent: iteration 7500: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.612049e-09, step = 0.01
+GPT :     497.642955 s : gradient_descent: iteration 7510: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 1.608679e-09, step = 0.01
+GPT :     498.162136 s : gradient_descent: iteration 7520: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.605316e-09, step = 0.01
+GPT :     498.682826 s : gradient_descent: iteration 7530: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.601961e-09, step = 0.01
+GPT :     499.204853 s : gradient_descent: iteration 7540: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 1.598614e-09, step = 0.01
+GPT :     499.724393 s : gradient_descent: iteration 7550: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.595273e-09, step = 0.01
+GPT :     500.244164 s : gradient_descent: iteration 7560: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.591940e-09, step = 0.01
+GPT :     500.763688 s : gradient_descent: iteration 7570: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.588615e-09, step = 0.01
+GPT :     501.284813 s : gradient_descent: iteration 7580: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.585296e-09, step = 0.01
+GPT :     501.804515 s : gradient_descent: iteration 7590: f(x) = -2.558938729427397e+05, |df|/sqrt(dof) = 1.581985e-09, step = 0.01
+GPT :     502.323689 s : gradient_descent: iteration 7600: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.578682e-09, step = 0.01
+GPT :     502.849108 s : gradient_descent: iteration 7610: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.575385e-09, step = 0.01
+GPT :     503.370485 s : gradient_descent: iteration 7620: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.572096e-09, step = 0.01
+GPT :     503.891139 s : gradient_descent: iteration 7630: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 1.568814e-09, step = 0.01
+GPT :     504.411386 s : gradient_descent: iteration 7640: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.565539e-09, step = 0.01
+GPT :     504.932087 s : gradient_descent: iteration 7650: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.562271e-09, step = 0.01
+GPT :     505.453813 s : gradient_descent: iteration 7660: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.559011e-09, step = 0.01
+GPT :     505.973610 s : gradient_descent: iteration 7670: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.555757e-09, step = 0.01
+GPT :     506.493804 s : gradient_descent: iteration 7680: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.552511e-09, step = 0.01
+GPT :     507.015130 s : gradient_descent: iteration 7690: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.549272e-09, step = 0.01
+GPT :     507.536793 s : gradient_descent: iteration 7700: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.546040e-09, step = 0.01
+GPT :     508.056728 s : gradient_descent: iteration 7710: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.542815e-09, step = 0.01
+GPT :     508.577760 s : gradient_descent: iteration 7720: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.539597e-09, step = 0.01
+GPT :     509.099455 s : gradient_descent: iteration 7730: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.536386e-09, step = 0.01
+GPT :     509.619963 s : gradient_descent: iteration 7740: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.533182e-09, step = 0.01
+GPT :     510.140410 s : gradient_descent: iteration 7750: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.529985e-09, step = 0.01
+GPT :     510.660759 s : gradient_descent: iteration 7760: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.526794e-09, step = 0.01
+GPT :     511.183147 s : gradient_descent: iteration 7770: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.523611e-09, step = 0.01
+GPT :     511.703326 s : gradient_descent: iteration 7780: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.520435e-09, step = 0.01
+GPT :     512.223720 s : gradient_descent: iteration 7790: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.517266e-09, step = 0.01
+GPT :     512.743897 s : gradient_descent: iteration 7800: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.514104e-09, step = 0.01
+GPT :     513.267027 s : gradient_descent: iteration 7810: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.510948e-09, step = 0.01
+GPT :     513.788219 s : gradient_descent: iteration 7820: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.507800e-09, step = 0.01
+GPT :     514.307558 s : gradient_descent: iteration 7830: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.504658e-09, step = 0.01
+GPT :     514.827702 s : gradient_descent: iteration 7840: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.501523e-09, step = 0.01
+GPT :     515.366393 s : gradient_descent: iteration 7850: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.498395e-09, step = 0.01
+GPT :     515.886433 s : gradient_descent: iteration 7860: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 1.495273e-09, step = 0.01
+GPT :     516.405492 s : gradient_descent: iteration 7870: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.492159e-09, step = 0.01
+GPT :     516.926154 s : gradient_descent: iteration 7880: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.489051e-09, step = 0.01
+GPT :     517.447544 s : gradient_descent: iteration 7890: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.485950e-09, step = 0.01
+GPT :     517.967648 s : gradient_descent: iteration 7900: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 1.482855e-09, step = 0.01
+GPT :     518.488256 s : gradient_descent: iteration 7910: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 1.479768e-09, step = 0.01
+GPT :     519.009589 s : gradient_descent: iteration 7920: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.476687e-09, step = 0.01
+GPT :     519.532584 s : gradient_descent: iteration 7930: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.473612e-09, step = 0.01
+GPT :     520.052382 s : gradient_descent: iteration 7940: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.470545e-09, step = 0.01
+GPT :     520.573499 s : gradient_descent: iteration 7950: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 1.467484e-09, step = 0.01
+GPT :     521.094731 s : gradient_descent: iteration 7960: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.464429e-09, step = 0.01
+GPT :     521.617423 s : gradient_descent: iteration 7970: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.461382e-09, step = 0.01
+GPT :     522.139309 s : gradient_descent: iteration 7980: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.458340e-09, step = 0.01
+GPT :     522.660767 s : gradient_descent: iteration 7990: f(x) = -2.558938729427399e+05, |df|/sqrt(dof) = 1.455306e-09, step = 0.01
+GPT :     523.182154 s : gradient_descent: iteration 8000: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.452278e-09, step = 0.01
+GPT :     523.705772 s : gradient_descent: iteration 8010: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 1.449256e-09, step = 0.01
+GPT :     524.225580 s : gradient_descent: iteration 8020: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.446241e-09, step = 0.01
+GPT :     524.747250 s : gradient_descent: iteration 8030: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.443232e-09, step = 0.01
+GPT :     525.268893 s : gradient_descent: iteration 8040: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.440230e-09, step = 0.01
+GPT :     525.792696 s : gradient_descent: iteration 8050: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.437235e-09, step = 0.01
+GPT :     526.313120 s : gradient_descent: iteration 8060: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.434246e-09, step = 0.01
+GPT :     526.833564 s : gradient_descent: iteration 8070: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.431263e-09, step = 0.01
+GPT :     527.354234 s : gradient_descent: iteration 8080: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.428287e-09, step = 0.01
+GPT :     527.877028 s : gradient_descent: iteration 8090: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.425317e-09, step = 0.01
+GPT :     528.399047 s : gradient_descent: iteration 8100: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.422353e-09, step = 0.01
+GPT :     528.921777 s : gradient_descent: iteration 8110: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.419396e-09, step = 0.01
+GPT :     529.445129 s : gradient_descent: iteration 8120: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.416445e-09, step = 0.01
+GPT :     529.970707 s : gradient_descent: iteration 8130: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.413501e-09, step = 0.01
+GPT :     530.493888 s : gradient_descent: iteration 8140: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.410563e-09, step = 0.01
+GPT :     531.017743 s : gradient_descent: iteration 8150: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.407631e-09, step = 0.01
+GPT :     531.539677 s : gradient_descent: iteration 8160: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.404705e-09, step = 0.01
+GPT :     532.062253 s : gradient_descent: iteration 8170: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.401786e-09, step = 0.01
+GPT :     532.584465 s : gradient_descent: iteration 8180: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.398873e-09, step = 0.01
+GPT :     533.105941 s : gradient_descent: iteration 8190: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 1.395967e-09, step = 0.01
+GPT :     533.629930 s : gradient_descent: iteration 8200: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 1.393066e-09, step = 0.01
+GPT :     534.158279 s : gradient_descent: iteration 8210: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.390172e-09, step = 0.01
+GPT :     534.681648 s : gradient_descent: iteration 8220: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.387284e-09, step = 0.01
+GPT :     535.203700 s : gradient_descent: iteration 8230: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.384402e-09, step = 0.01
+GPT :     535.725090 s : gradient_descent: iteration 8240: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.381526e-09, step = 0.01
+GPT :     536.248139 s : gradient_descent: iteration 8250: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.378657e-09, step = 0.01
+GPT :     536.770329 s : gradient_descent: iteration 8260: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.375793e-09, step = 0.01
+GPT :     537.292630 s : gradient_descent: iteration 8270: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.372936e-09, step = 0.01
+GPT :     537.814254 s : gradient_descent: iteration 8280: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 1.370085e-09, step = 0.01
+GPT :     538.338793 s : gradient_descent: iteration 8290: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.367240e-09, step = 0.01
+GPT :     538.861377 s : gradient_descent: iteration 8300: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.364401e-09, step = 0.01
+GPT :     539.382438 s : gradient_descent: iteration 8310: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.361568e-09, step = 0.01
+GPT :     539.901690 s : gradient_descent: iteration 8320: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.358741e-09, step = 0.01
+GPT :     540.427002 s : gradient_descent: iteration 8330: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.355920e-09, step = 0.01
+GPT :     540.950521 s : gradient_descent: iteration 8340: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.353105e-09, step = 0.01
+GPT :     541.473690 s : gradient_descent: iteration 8350: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.350297e-09, step = 0.01
+GPT :     541.995880 s : gradient_descent: iteration 8360: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.347494e-09, step = 0.01
+GPT :     542.517571 s : gradient_descent: iteration 8370: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.344697e-09, step = 0.01
+GPT :     543.039288 s : gradient_descent: iteration 8380: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.341906e-09, step = 0.01
+GPT :     543.560391 s : gradient_descent: iteration 8390: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.339121e-09, step = 0.01
+GPT :     544.100198 s : gradient_descent: iteration 8400: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.336342e-09, step = 0.01
+GPT :     544.624676 s : gradient_descent: iteration 8410: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 1.333569e-09, step = 0.01
+GPT :     545.146269 s : gradient_descent: iteration 8420: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.330802e-09, step = 0.01
+GPT :     545.668041 s : gradient_descent: iteration 8430: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 1.328041e-09, step = 0.01
+GPT :     546.198860 s : gradient_descent: iteration 8440: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.325285e-09, step = 0.01
+GPT :     546.732146 s : gradient_descent: iteration 8450: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.322536e-09, step = 0.01
+GPT :     547.252892 s : gradient_descent: iteration 8460: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.319792e-09, step = 0.01
+GPT :     547.774780 s : gradient_descent: iteration 8470: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.317054e-09, step = 0.01
+GPT :     548.297507 s : gradient_descent: iteration 8480: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.314322e-09, step = 0.01
+GPT :     548.821117 s : gradient_descent: iteration 8490: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.311596e-09, step = 0.01
+GPT :     549.344896 s : gradient_descent: iteration 8500: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.308876e-09, step = 0.01
+GPT :     549.866211 s : gradient_descent: iteration 8510: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 1.306161e-09, step = 0.01
+GPT :     550.404831 s : gradient_descent: iteration 8520: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.303452e-09, step = 0.01
+GPT :     550.926105 s : gradient_descent: iteration 8530: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 1.300749e-09, step = 0.01
+GPT :     551.447897 s : gradient_descent: iteration 8540: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.298052e-09, step = 0.01
+GPT :     551.969444 s : gradient_descent: iteration 8550: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.295360e-09, step = 0.01
+GPT :     552.493367 s : gradient_descent: iteration 8560: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.292675e-09, step = 0.01
+GPT :     553.015089 s : gradient_descent: iteration 8570: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.289994e-09, step = 0.01
+GPT :     553.537902 s : gradient_descent: iteration 8580: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.287320e-09, step = 0.01
+GPT :     554.059732 s : gradient_descent: iteration 8590: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.284651e-09, step = 0.01
+GPT :     554.585996 s : gradient_descent: iteration 8600: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.281988e-09, step = 0.01
+GPT :     555.110209 s : gradient_descent: iteration 8610: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 1.279330e-09, step = 0.01
+GPT :     555.634644 s : gradient_descent: iteration 8620: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.276678e-09, step = 0.01
+GPT :     556.156574 s : gradient_descent: iteration 8630: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.274032e-09, step = 0.01
+GPT :     556.681650 s : gradient_descent: iteration 8640: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.271392e-09, step = 0.01
+GPT :     557.205194 s : gradient_descent: iteration 8650: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.268757e-09, step = 0.01
+GPT :     557.727798 s : gradient_descent: iteration 8660: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 1.266127e-09, step = 0.01
+GPT :     558.248965 s : gradient_descent: iteration 8670: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.263503e-09, step = 0.01
+GPT :     558.788893 s : gradient_descent: iteration 8680: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.260885e-09, step = 0.01
+GPT :     559.311285 s : gradient_descent: iteration 8690: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.258272e-09, step = 0.01
+GPT :     559.834289 s : gradient_descent: iteration 8700: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 1.255665e-09, step = 0.01
+GPT :     560.356489 s : gradient_descent: iteration 8710: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.253063e-09, step = 0.01
+GPT :     560.882145 s : gradient_descent: iteration 8720: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.250467e-09, step = 0.01
+GPT :     561.405133 s : gradient_descent: iteration 8730: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 1.247876e-09, step = 0.01
+GPT :     561.927372 s : gradient_descent: iteration 8740: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.245291e-09, step = 0.01
+GPT :     562.449836 s : gradient_descent: iteration 8750: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.242711e-09, step = 0.01
+GPT :     562.975280 s : gradient_descent: iteration 8760: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.240136e-09, step = 0.01
+GPT :     563.498241 s : gradient_descent: iteration 8770: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.237568e-09, step = 0.01
+GPT :     564.021777 s : gradient_descent: iteration 8780: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.235004e-09, step = 0.01
+GPT :     564.544880 s : gradient_descent: iteration 8790: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 1.232446e-09, step = 0.01
+GPT :     565.070213 s : gradient_descent: iteration 8800: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.229893e-09, step = 0.01
+GPT :     565.593549 s : gradient_descent: iteration 8810: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.227346e-09, step = 0.01
+GPT :     566.116026 s : gradient_descent: iteration 8820: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 1.224804e-09, step = 0.01
+GPT :     566.639530 s : gradient_descent: iteration 8830: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.222268e-09, step = 0.01
+GPT :     567.165179 s : gradient_descent: iteration 8840: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.219736e-09, step = 0.01
+GPT :     567.688181 s : gradient_descent: iteration 8850: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.217211e-09, step = 0.01
+GPT :     568.210104 s : gradient_descent: iteration 8860: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.214690e-09, step = 0.01
+GPT :     568.734178 s : gradient_descent: iteration 8870: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.212175e-09, step = 0.01
+GPT :     569.259004 s : gradient_descent: iteration 8880: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.209665e-09, step = 0.01
+GPT :     569.782887 s : gradient_descent: iteration 8890: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.207160e-09, step = 0.01
+GPT :     570.306048 s : gradient_descent: iteration 8900: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.204661e-09, step = 0.01
+GPT :     570.830268 s : gradient_descent: iteration 8910: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.202167e-09, step = 0.01
+GPT :     571.354781 s : gradient_descent: iteration 8920: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 1.199678e-09, step = 0.01
+GPT :     571.879108 s : gradient_descent: iteration 8930: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.197195e-09, step = 0.01
+GPT :     572.403399 s : gradient_descent: iteration 8940: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.194716e-09, step = 0.01
+GPT :     572.929286 s : gradient_descent: iteration 8950: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.192243e-09, step = 0.01
+GPT :     573.454050 s : gradient_descent: iteration 8960: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.189775e-09, step = 0.01
+GPT :     573.977970 s : gradient_descent: iteration 8970: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.187313e-09, step = 0.01
+GPT :     574.501386 s : gradient_descent: iteration 8980: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.184855e-09, step = 0.01
+GPT :     575.027666 s : gradient_descent: iteration 8990: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.182403e-09, step = 0.01
+GPT :     575.551655 s : gradient_descent: iteration 9000: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.179955e-09, step = 0.01
+GPT :     576.074424 s : gradient_descent: iteration 9010: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.177513e-09, step = 0.01
+GPT :     576.599316 s : gradient_descent: iteration 9020: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.175077e-09, step = 0.01
+GPT :     577.125872 s : gradient_descent: iteration 9030: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.172645e-09, step = 0.01
+GPT :     577.649479 s : gradient_descent: iteration 9040: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.170218e-09, step = 0.01
+GPT :     578.172369 s : gradient_descent: iteration 9050: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.167797e-09, step = 0.01
+GPT :     578.696970 s : gradient_descent: iteration 9060: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 1.165380e-09, step = 0.01
+GPT :     579.222512 s : gradient_descent: iteration 9070: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.162969e-09, step = 0.01
+GPT :     579.747322 s : gradient_descent: iteration 9080: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.160562e-09, step = 0.01
+GPT :     580.270718 s : gradient_descent: iteration 9090: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.158161e-09, step = 0.01
+GPT :     580.794485 s : gradient_descent: iteration 9100: f(x) = -2.558938729427397e+05, |df|/sqrt(dof) = 1.155765e-09, step = 0.01
+GPT :     581.321795 s : gradient_descent: iteration 9110: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.153374e-09, step = 0.01
+GPT :     581.847150 s : gradient_descent: iteration 9120: f(x) = -2.558938729427396e+05, |df|/sqrt(dof) = 1.150988e-09, step = 0.01
+GPT :     582.374171 s : gradient_descent: iteration 9130: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.148606e-09, step = 0.01
+GPT :     582.901041 s : gradient_descent: iteration 9140: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 1.146230e-09, step = 0.01
+GPT :     583.427768 s : gradient_descent: iteration 9150: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.143859e-09, step = 0.01
+GPT :     583.953741 s : gradient_descent: iteration 9160: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.141493e-09, step = 0.01
+GPT :     584.477444 s : gradient_descent: iteration 9170: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.139132e-09, step = 0.01
+GPT :     585.002028 s : gradient_descent: iteration 9180: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.136776e-09, step = 0.01
+GPT :     585.528254 s : gradient_descent: iteration 9190: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.134424e-09, step = 0.01
+GPT :     586.052055 s : gradient_descent: iteration 9200: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.132078e-09, step = 0.01
+GPT :     586.578235 s : gradient_descent: iteration 9210: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 1.129736e-09, step = 0.01
+GPT :     587.102646 s : gradient_descent: iteration 9220: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 1.127400e-09, step = 0.01
+GPT :     587.629915 s : gradient_descent: iteration 9230: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 1.125068e-09, step = 0.01
+GPT :     588.154413 s : gradient_descent: iteration 9240: f(x) = -2.558938729427386e+05, |df|/sqrt(dof) = 1.122741e-09, step = 0.01
+GPT :     588.679333 s : gradient_descent: iteration 9250: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 1.120420e-09, step = 0.01
+GPT :     589.203075 s : gradient_descent: iteration 9260: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 1.118103e-09, step = 0.01
+GPT :     589.730634 s : gradient_descent: iteration 9270: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 1.115790e-09, step = 0.01
+GPT :     590.253026 s : gradient_descent: iteration 9280: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.113483e-09, step = 0.01
+GPT :     590.777420 s : gradient_descent: iteration 9290: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.111181e-09, step = 0.01
+GPT :     591.301313 s : gradient_descent: iteration 9300: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.108883e-09, step = 0.01
+GPT :     591.827497 s : gradient_descent: iteration 9310: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.106590e-09, step = 0.01
+GPT :     592.350457 s : gradient_descent: iteration 9320: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.104302e-09, step = 0.01
+GPT :     592.875359 s : gradient_descent: iteration 9330: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.102019e-09, step = 0.01
+GPT :     593.399666 s : gradient_descent: iteration 9340: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 1.099740e-09, step = 0.01
+GPT :     593.925964 s : gradient_descent: iteration 9350: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.097467e-09, step = 0.01
+GPT :     594.449070 s : gradient_descent: iteration 9360: f(x) = -2.558938729427386e+05, |df|/sqrt(dof) = 1.095198e-09, step = 0.01
+GPT :     594.973858 s : gradient_descent: iteration 9370: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 1.092934e-09, step = 0.01
+GPT :     595.497075 s : gradient_descent: iteration 9380: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.090674e-09, step = 0.01
+GPT :     596.024402 s : gradient_descent: iteration 9390: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.088419e-09, step = 0.01
+GPT :     596.549685 s : gradient_descent: iteration 9400: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.086169e-09, step = 0.01
+GPT :     597.074422 s : gradient_descent: iteration 9410: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 1.083924e-09, step = 0.01
+GPT :     597.600426 s : gradient_descent: iteration 9420: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.081684e-09, step = 0.01
+GPT :     598.124995 s : gradient_descent: iteration 9430: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 1.079448e-09, step = 0.01
+GPT :     598.650609 s : gradient_descent: iteration 9440: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.077216e-09, step = 0.01
+GPT :     599.176166 s : gradient_descent: iteration 9450: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.074990e-09, step = 0.01
+GPT :     599.703145 s : gradient_descent: iteration 9460: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.072768e-09, step = 0.01
+GPT :     600.227519 s : gradient_descent: iteration 9470: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 1.070551e-09, step = 0.01
+GPT :     600.752093 s : gradient_descent: iteration 9480: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 1.068338e-09, step = 0.01
+GPT :     601.277601 s : gradient_descent: iteration 9490: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.066130e-09, step = 0.01
+GPT :     601.805189 s : gradient_descent: iteration 9500: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.063927e-09, step = 0.01
+GPT :     602.328316 s : gradient_descent: iteration 9510: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 1.061728e-09, step = 0.01
+GPT :     602.852692 s : gradient_descent: iteration 9520: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.059534e-09, step = 0.01
+GPT :     603.377054 s : gradient_descent: iteration 9530: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 1.057344e-09, step = 0.01
+GPT :     603.903715 s : gradient_descent: iteration 9540: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.055159e-09, step = 0.01
+GPT :     604.425758 s : gradient_descent: iteration 9550: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.052979e-09, step = 0.01
+GPT :     604.950265 s : gradient_descent: iteration 9560: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.050803e-09, step = 0.01
+GPT :     605.473990 s : gradient_descent: iteration 9570: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.048631e-09, step = 0.01
+GPT :     606.000790 s : gradient_descent: iteration 9580: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.046465e-09, step = 0.01
+GPT :     606.525285 s : gradient_descent: iteration 9590: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.044302e-09, step = 0.01
+GPT :     607.070146 s : gradient_descent: iteration 9600: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.042144e-09, step = 0.01
+GPT :     607.594826 s : gradient_descent: iteration 9610: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.039991e-09, step = 0.01
+GPT :     608.121177 s : gradient_descent: iteration 9620: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.037842e-09, step = 0.01
+GPT :     608.646438 s : gradient_descent: iteration 9630: f(x) = -2.558938729427389e+05, |df|/sqrt(dof) = 1.035698e-09, step = 0.01
+GPT :     609.171761 s : gradient_descent: iteration 9640: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.033558e-09, step = 0.01
+GPT :     609.694330 s : gradient_descent: iteration 9650: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.031423e-09, step = 0.01
+GPT :     610.218913 s : gradient_descent: iteration 9660: f(x) = -2.558938729427395e+05, |df|/sqrt(dof) = 1.029292e-09, step = 0.01
+GPT :     610.742293 s : gradient_descent: iteration 9670: f(x) = -2.558938729427393e+05, |df|/sqrt(dof) = 1.027165e-09, step = 0.01
+GPT :     611.267042 s : gradient_descent: iteration 9680: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.025043e-09, step = 0.01
+GPT :     611.789879 s : gradient_descent: iteration 9690: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 1.022926e-09, step = 0.01
+GPT :     612.315352 s : gradient_descent: iteration 9700: f(x) = -2.558938729427394e+05, |df|/sqrt(dof) = 1.020813e-09, step = 0.01
+GPT :     612.839353 s : gradient_descent: iteration 9710: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.018704e-09, step = 0.01
+GPT :     613.363019 s : gradient_descent: iteration 9720: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 1.016599e-09, step = 0.01
+GPT :     613.886416 s : gradient_descent: iteration 9730: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.014499e-09, step = 0.01
+GPT :     614.412264 s : gradient_descent: iteration 9740: f(x) = -2.558938729427388e+05, |df|/sqrt(dof) = 1.012404e-09, step = 0.01
+GPT :     614.936012 s : gradient_descent: iteration 9750: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.010313e-09, step = 0.01
+GPT :     615.459644 s : gradient_descent: iteration 9760: f(x) = -2.558938729427387e+05, |df|/sqrt(dof) = 1.008226e-09, step = 0.01
+GPT :     615.983956 s : gradient_descent: iteration 9770: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.006143e-09, step = 0.01
+GPT :     616.507873 s : gradient_descent: iteration 9780: f(x) = -2.558938729427390e+05, |df|/sqrt(dof) = 1.004065e-09, step = 0.01
+GPT :     617.032898 s : gradient_descent: iteration 9790: f(x) = -2.558938729427392e+05, |df|/sqrt(dof) = 1.001991e-09, step = 0.01
+GPT :     617.556897 s : gradient_descent: iteration 9800: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 9.999215e-10, step = 0.01
+GPT :     617.578305 s : gradient_descent: converged in 9801 iterations: f(x) = -2.558938729427391e+05, |df|/sqrt(dof) = 9.999215e-10
+GPT :     617.586059 s : Switching view to [1,1,1,1]/Write
+GPT :     617.600049 s : Wrote 0.00219727 GB at 0.156964 GB/s (0.212473 GB/s for distribution, 1.57862 GB/s for checksum, 1.15315 GB/s for writing, 1 views per node)
+GPT :     617.604906 s : Wrote 0.00219727 GB at 0.471744 GB/s (1.47503 GB/s for distribution, 1.6095 GB/s for checksum, 1.2311 GB/s for writing, 1 views per node)
+GPT :     617.609659 s : Wrote 0.00219727 GB at 0.480075 GB/s (1.49416 GB/s for distribution, 1.62511 GB/s for checksum, 1.26264 GB/s for writing, 1 views per node)
+GPT :     617.614397 s : Wrote 0.00219727 GB at 0.481128 GB/s (1.51008 GB/s for distribution, 1.62942 GB/s for checksum, 1.25559 GB/s for writing, 1 views per node)
+GPT :     617.623219 s : Completed writing configs/S8T32/wilson_b6.coulomb.1e-9.42 in 0.0389509 s
+=============================================
+               Finalized GPT                 
+=============================================
