@@ -32,7 +32,7 @@ EXPORT(Gauge_fix,{
     cgpt_convert(_alpha, alpha); // Convert alpha from PyObject* to Real
     LatticeColourMatrixD xform1(grid);
 
-    FourierAcceleratedGaugeFixer<PeriodicGimplR>::SteepestDescentGaugeFix(U,xform1,alpha,maxiter,prec,prec,false,3);
+    FourierAcceleratedGaugeFixer<PeriodicGimplR>::SteepestDescentGaugeFix(U,xform1,alpha,maxiter,prec,prec,false,3,false);
 
     std::vector< cgpt_Lattice_base* > U_prime(4);
     for (int mu=0;mu<4;mu++) {

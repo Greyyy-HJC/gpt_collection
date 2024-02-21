@@ -1,3 +1,4 @@
-- Modified the cgpt function gauge_fix in the file /home/jinchen/git/lat-software/gpt_install/mygpt/lib/cgpt/lib/gauge_fix.cc, make the step "alpha" to be a parameter;
+- Modified the cgpt function gauge_fix in the file /home/jinchen/git/lat-software/gpt_install/mygpt/lib/cgpt/lib/gauge_fix.cc, make the step "alpha" to be a parameter; modify the paras of SteepestDescentGaugeFix, err_on_no_converge=false;
 - Modified the gpt function gauge_fix in the file mygpt/lib/gpt/core/transform.py;
 - Add Coulomb gauge fixing function in the folder mygpt/lib/gpt/qcd/gauge/fix;
+- 
